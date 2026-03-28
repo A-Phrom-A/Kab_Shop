@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
-import { Plus, Image as ImageIcon, Trash2, Edit, Search, ExternalLink, Filter } from 'lucide-react';
+import { Plus, Image as ImageIcon, Trash2, Edit, Search, ExternalLink, Filter, X, ArrowLeft, ArrowRight } from 'lucide-react';
+type MediaItem = { id: string; type: 'url' | 'file'; url?: string; file?: File; preview?: string };
 
 export default function AdminProductsPage() {
   const [products, setProducts] = useState<any[]>([]);
@@ -15,13 +16,14 @@ export default function AdminProductsPage() {
   // Form State
   const [isAdding, setIsAdding] = useState(false);
   const [editingId, setEditingId] = useState<string | null>(null);
-  const [formData, setFormData] = useState({ name: '', sku: '', category_id: '', price: '', cost: '', stock: '', description: '', image_urls: [] as string[], tags: [] as string[] });
-  const [files, setFiles] = useState<File[]>([]);
+  const [formData, setFormData] = useState({ name: '', sku: '', category_id: '', price: '', cost: '', stock: '', description: '', image_urls: [] as string[], tags: [] as string[], specs: [] as { key: string, value: string }[] });
+  const [mediaItems, setMediaItems] = useState<MediaItem[]>([]);
   const [uploading, setUploading] = useState(false);
 
   // Search & Filter State
   const [searchQuery, setSearchQuery] = useState('');
   const [filterTags, setFilterTags] = useState<string[]>([]);
+  const [filterCategory, setFilterCategory] = useState<string>('');
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
   const [showFilters, setShowFilters] = useState(false);
@@ -29,7 +31,7 @@ export default function AdminProductsPage() {
   const formRef = useRef<HTMLDivElement>(null);
 
   const AVAILABLE_TAGS = [
-    "Cheap & Good", "Value for Money", "Minimal", "Luxury", "Premium", 
+    "Popular", "Cheap & Good", "Value for Money", "Minimal", "Luxury", "Premium", 
     "Mechanical", "For Journey", "Creative", "Education", "New"
   ];
 
@@ -45,7 +47,10 @@ export default function AdminProductsPage() {
     const matchesMin = !minPrice || price >= Number(minPrice);
     const matchesMax = !maxPrice || price <= Number(maxPrice);
 
-    return matchesSearch && matchesTags && matchesMin && matchesMax;
+    // Category matching
+    const matchesCategory = !filterCategory || p.category_id === filterCategory;
+
+    return matchesSearch && matchesTags && matchesMin && matchesMax && matchesCategory;
   });
 
   const fetchData = async () => {
@@ -79,8 +84,11 @@ export default function AdminProductsPage() {
       description: product.description || '',
       image_urls: product.image_urls || [],
       tags: product.tags || [],
+      specs: Object.entries(product.specs || {}).map(([k, v]) => ({ key: k, value: String(v) })),
     });
-    setFiles([]);
+    setMediaItems(
+      (product.image_urls || []).map((url: string, i: number) => ({ id: `url-${i}`, type: 'url', url }))
+    );
     setIsAdding(true);
     
     // Auto-scroll to form so admin doesn't have to manually scroll up
@@ -92,8 +100,8 @@ export default function AdminProductsPage() {
   const handleCancel = () => {
     setIsAdding(false);
     setEditingId(null);
-    setFormData({ name: '', sku: '', category_id: categories[0]?.id || '', price: '', cost: '', stock: '', description: '', image_urls: [], tags: [] });
-    setFiles([]);
+    setFormData({ name: '', sku: '', category_id: categories[0]?.id || '', price: '', cost: '', stock: '', description: '', image_urls: [], tags: [], specs: [] });
+    setMediaItems([]);
   };
 
   const handleSaveProduct = async (e: React.FormEvent) => {
@@ -101,23 +109,28 @@ export default function AdminProductsPage() {
     setUploading(true);
 
     try {
-      let imageUrls = formData.image_urls || [];
-      
-      if (files.length > 0) {
-        // Upload new files
-        const uploadPromises = files.map(async (fileObj) => {
-          const fileExt = fileObj.name.split('.').pop();
-          const fileName = `${Date.now()}-${Math.random()}.${fileExt}`;
-          const { error: uploadError } = await supabase.storage.from('product-images').upload(fileName, fileObj);
-          if (uploadError) throw uploadError;
+      // Process all media items sequentially maintaining exact array order
+      const uploadPromises = mediaItems.map(async (item) => {
+        if (item.type === 'url') return item.url!;
+        
+        const fileObj = item.file!;
+        const fileExt = fileObj.name.split('.').pop();
+        const fileName = `${Date.now()}-${Math.random()}.${fileExt}`;
+        const { error: uploadError } = await supabase.storage.from('product-images').upload(fileName, fileObj);
+        if (uploadError) throw uploadError;
 
-          const { data: { publicUrl } } = supabase.storage.from('product-images').getPublicUrl(fileName);
-          return publicUrl;
-        });
+        const { data: { publicUrl } } = supabase.storage.from('product-images').getPublicUrl(fileName);
+        return publicUrl;
+      });
 
-        const newUrls = await Promise.all(uploadPromises);
-        imageUrls = editingId ? [...imageUrls, ...newUrls] : newUrls; // Append if editing, replace if new
-      }
+      const finalUrls = await Promise.all(uploadPromises);
+
+      const specsRecord = formData.specs.reduce((acc, curr) => {
+        if (curr.key.trim() && curr.value.trim()) {
+          acc[curr.key.trim()] = curr.value.trim();
+        }
+        return acc;
+      }, {} as Record<string, string>);
 
       const productData = {
         name: formData.name,
@@ -127,8 +140,9 @@ export default function AdminProductsPage() {
         cost: Number(formData.cost),
         stock: Number(formData.stock),
         description: formData.description,
-        image_urls: imageUrls,
-        tags: formData.tags
+        image_urls: finalUrls,
+        tags: formData.tags,
+        specs: specsRecord
       };
 
       if (editingId) {
@@ -180,7 +194,7 @@ export default function AdminProductsPage() {
             </div>
             <button 
                 onClick={() => setShowFilters(!showFilters)}
-                className={`p-2 rounded-lg border transition-colors ${showFilters || filterTags.length > 0 || minPrice || maxPrice ? 'bg-gold/20 border-gold/50 text-gold' : 'bg-white/5 border-white/20 text-white/60 hover:text-white'}`}
+                className={`p-2 rounded-lg border transition-colors ${showFilters || filterTags.length > 0 || minPrice || maxPrice || filterCategory ? 'bg-gold/20 border-gold/50 text-gold' : 'bg-white/5 border-white/20 text-white/60 hover:text-white'}`}
                 title="Toggle Filters"
             >
                 <Filter size={20} />
@@ -193,8 +207,21 @@ export default function AdminProductsPage() {
 
         {/* Expandable Advanced Filters */}
         {showFilters && (
-            <div className="pt-4 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-in slide-in-from-top-2">
+            <div className="pt-4 border-t border-white/10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-in slide-in-from-top-2">
                 
+                {/* Category Filter */}
+                <div>
+                    <label className="text-xs text-white/50 block mb-2">Category</label>
+                    <select 
+                      value={filterCategory} 
+                      onChange={e => setFilterCategory(e.target.value)} 
+                      className="w-full bg-black/40 border border-white/10 rounded-md px-3 py-1.5 text-sm text-white focus:border-gold focus:outline-none [&>option]:bg-zinc-900"
+                    >
+                      <option value="">All Categories</option>
+                      {categories.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
+                    </select>
+                </div>
+
                 {/* Price Filter */}
                 <div>
                     <label className="text-xs text-white/50 block mb-2">Price Range ($)</label>
@@ -241,11 +268,12 @@ export default function AdminProductsPage() {
                 </div>
 
                 {/* Clear Filters */}
-                {(filterTags.length > 0 || minPrice || maxPrice || searchQuery) && (
-                    <div className="col-span-1 md:col-span-2 lg:col-span-3 flex justify-end">
+                {(filterTags.length > 0 || minPrice || maxPrice || searchQuery || filterCategory) && (
+                    <div className="col-span-1 md:col-span-2 lg:col-span-4 flex justify-end">
                         <button 
                             onClick={() => {
                                 setFilterTags([]);
+                                setFilterCategory('');
                                 setMinPrice('');
                                 setMaxPrice('');
                                 setSearchQuery('');
@@ -295,7 +323,7 @@ export default function AdminProductsPage() {
                 <label className="text-xs text-white/50 block mb-2">Product Tags (Max 3) - Defines Bespoke Quiz Results</label>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "Cheap & Good", "Value for Money", "Minimal", "Luxury", "Premium", 
+                    "Popular", "Cheap & Good", "Value for Money", "Minimal", "Luxury", "Premium", 
                     "Mechanical", "For Journey", "Creative", "Education", "New"
                   ].map(tag => {
                     const isSelected = formData.tags.includes(tag);
@@ -325,7 +353,12 @@ export default function AdminProductsPage() {
                 {formData.tags.length >= 3 && <p className="text-xs text-gold/80 mt-2">Maximum 3 tags reached.</p>}
               </div>
               <div>
-                <label className="text-xs text-white/50 block mb-1">Product Images (Max 10)</label>
+                <div className="flex justify-between items-center mb-1">
+                  <label className="text-xs text-white/50 block">Product Images (Max 10)</label>
+                  {mediaItems.length > 0 && (
+                    <button type="button" onClick={() => setMediaItems([])} className="text-[10px] sm:text-xs text-red-500 hover:text-red-400 font-medium">Clear All</button>
+                  )}
+                </div>
                 <div className="flex flex-col gap-2">
                   <input 
                     type="file" 
@@ -333,24 +366,103 @@ export default function AdminProductsPage() {
                     multiple 
                     onChange={e => {
                       const selectedFiles = Array.from(e.target.files || []);
-                      if (selectedFiles.length > 10) {
-                        alert('You can only upload a maximum of 10 images.');
-                        setFiles(selectedFiles.slice(0, 10));
-                      } else {
-                        setFiles(selectedFiles);
+                      if (mediaItems.length + selectedFiles.length > 10) {
+                        alert('You can only have a maximum of 10 images total.');
+                        return;
                       }
+                      const newItems = selectedFiles.map((f, i) => ({ 
+                        id: `file-${Date.now()}-${i}`, 
+                        type: 'file' as const, 
+                        file: f, 
+                        preview: URL.createObjectURL(f) 
+                      }));
+                      setMediaItems([...mediaItems, ...newItems]);
+                      e.target.value = ''; // Reset file input
                     }} 
                     className="w-full text-sm text-white/50 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-white/10 file:text-white hover:file:bg-white/20" 
                   />
-                  {files.length > 0 && <p className="text-xs text-gold">{files.length} new files selected for upload.</p>}
-                  {formData.image_urls.length > 0 && editingId && (
-                    <p className="text-xs text-white/40">Current images: {formData.image_urls.length} (New uploads will be added to the gallery)</p>
+                  {mediaItems.length > 0 && (
+                    <div className="flex gap-2 sm:gap-4 overflow-x-auto py-2">
+                      {mediaItems.map((item, index) => (
+                        <div key={item.id} className="relative w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0 rounded-lg overflow-hidden border border-white/20 bg-white/5 group">
+                          <img src={item.type === 'url' ? item.url : item.preview} alt="" className="object-contain w-full h-full" />
+                          <button type="button" onClick={() => {
+                            setMediaItems(mediaItems.filter((_, i) => i !== index));
+                          }} className="absolute top-1 right-1 bg-red-500/80 p-1 sm:p-1.5 rounded hover:bg-red-500 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
+                            <X size={14} className="text-white" />
+                          </button>
+                          <div className="absolute bottom-1 w-full flex justify-center gap-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
+                            {index > 0 && (
+                              <button type="button" onClick={() => {
+                                const newMedia = [...mediaItems];
+                                [newMedia[index], newMedia[index - 1]] = [newMedia[index - 1], newMedia[index]];
+                                setMediaItems(newMedia);
+                              }} className="bg-black/80 p-1 sm:p-1.5 rounded hover:bg-black">
+                                <ArrowLeft size={14} className="text-white" />
+                              </button>
+                            )}
+                            {index < mediaItems.length - 1 && (
+                              <button type="button" onClick={() => {
+                                const newMedia = [...mediaItems];
+                                [newMedia[index], newMedia[index + 1]] = [newMedia[index + 1], newMedia[index]];
+                                setMediaItems(newMedia);
+                              }} className="bg-black/80 p-1 sm:p-1.5 rounded hover:bg-black">
+                                <ArrowRight size={14} className="text-white" />
+                              </button>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   )}
+                  {mediaItems.length > 0 && <p className="text-[10px] text-white/40">Use the left/right arrows to rearrange the queue. The leftmost picture will be used as the display cover.</p>}
                 </div>
               </div>
               <div className="md:col-span-2">
                 <label className="text-xs text-white/50 block mb-1">Description</label>
                 <textarea required value={formData.description} onChange={e => setFormData({...formData, description: e.target.value})} rows={3} className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white focus:border-gold focus:outline-none"></textarea>
+              </div>
+              <div className="md:col-span-2 border-t border-white/10 pt-4">
+                <label className="text-xs text-white/50 block mb-2">Specifications</label>
+                <div className="flex flex-col gap-2">
+                  {formData.specs.map((spec, index) => (
+                    <div key={index} className="flex gap-2 items-center">
+                      <input 
+                         type="text" 
+                         placeholder="Key (e.g. Size)" 
+                         value={spec.key} 
+                         onChange={e => {
+                            const newSpecs = [...formData.specs];
+                            newSpecs[index].key = e.target.value;
+                            setFormData({...formData, specs: newSpecs});
+                         }}
+                         className="w-1/3 min-w-[100px] bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:border-gold focus:outline-none" 
+                      />
+                      <input 
+                         type="text" 
+                         placeholder="Value (e.g. 5x5 cm)" 
+                         value={spec.value} 
+                         onChange={e => {
+                            const newSpecs = [...formData.specs];
+                            newSpecs[index].value = e.target.value;
+                            setFormData({...formData, specs: newSpecs});
+                         }}
+                         className="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:border-gold focus:outline-none" 
+                      />
+                      <button type="button" onClick={() => {
+                          const newSpecs = formData.specs.filter((_, i) => i !== index);
+                          setFormData({...formData, specs: newSpecs});
+                      }} className="p-2 text-red-500 hover:bg-red-500/10 rounded-lg flex-shrink-0">
+                        <Trash2 size={18} />
+                      </button>
+                    </div>
+                  ))}
+                  <Button type="button" variant="secondary" onClick={() => {
+                      setFormData({...formData, specs: [...formData.specs, { key: '', value: '' }]});
+                  }} className="w-max mt-1 text-xs py-1.5 px-3">
+                     <Plus size={14} className="mr-1 inline" /> Add Spec
+                  </Button>
+                </div>
               </div>
             </div>
             <div className="flex justify-end pt-4">
@@ -367,7 +479,7 @@ export default function AdminProductsPage() {
           filteredProducts.map(product => (
             <Card key={product.id} className="flex flex-col sm:flex-row gap-4 items-center !p-4">
             <div className="w-16 h-16 bg-white/5 rounded flex-shrink-0 flex items-center justify-center overflow-hidden">
-              {product.image_urls?.[0] ? <img src={product.image_urls[0]} alt="" className="object-cover w-full h-full" /> : <ImageIcon className="text-white/20" />}
+              {product.image_urls?.[0] ? <img src={product.image_urls[0]} alt="" className="object-contain w-full h-full" /> : <ImageIcon className="text-white/20" />}
             </div>
             <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
               <div>

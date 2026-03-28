@@ -69,6 +69,8 @@ export default function ProfilePage() {
           total_price, 
           status, 
           created_at,
+          tracking_number,
+          cancellation_reason,
           order_items (
             quantity, 
             price_at_purchase,
@@ -311,6 +313,23 @@ export default function ProfilePage() {
                       {getStatusBadge(order.status)}
                     </div>
                   </div>
+
+                  {(order.tracking_number || order.cancellation_reason) && (
+                    <div className="mb-4">
+                      {order.tracking_number && (order.status === 1 || order.status === 2) && (
+                        <div className="bg-blue-500/10 border border-blue-500/20 p-3 rounded-lg mb-2">
+                           <p className="text-xs text-blue-400 font-bold mb-1">Tracking Number</p>
+                           <p className="font-mono text-sm text-white select-all">{order.tracking_number}</p>
+                        </div>
+                      )}
+                      {order.cancellation_reason && order.status === 3 && (
+                        <div className="bg-red-500/10 border border-red-500/20 p-3 rounded-lg">
+                           <p className="text-xs text-red-400 font-bold mb-1">Cancellation Reason</p>
+                           <p className="text-sm text-red-200">{order.cancellation_reason}</p>
+                        </div>
+                      )}
+                    </div>
+                  )}
                   
                   <div className="space-y-2 mb-4">
                     {order.order_items?.map((item: any, idx: number) => (

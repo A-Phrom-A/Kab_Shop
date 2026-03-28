@@ -100,7 +100,7 @@ function SearchContent() {
               <Link href={`/product/${product.id}`} className="flex flex-col h-full">
                 <div className="aspect-square bg-white/5 relative overflow-hidden">
                   {product.image_urls && product.image_urls[0] ? (
-                    <img src={product.image_urls[0]} alt={product.name} className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
+                    <img src={product.image_urls[0]} alt={product.name} className="object-contain w-full h-full group-hover:scale-105 transition-transform duration-500" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-white/20">
                       <span className="text-sm">No Image</span>

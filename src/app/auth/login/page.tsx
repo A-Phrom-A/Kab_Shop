@@ -14,6 +14,8 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isForgotPassword, setIsForgotPassword] = useState(false);
+  const [resetMessage, setResetMessage] = useState<string | null>(null);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,19 +36,47 @@ export default function LoginPage() {
     }
   };
 
+  const handleResetPassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) {
+      setError('Please enter your email address first.');
+      return;
+    }
+    
+    setLoading(true);
+    setError(null);
+    setResetMessage(null);
+
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/auth/update-password`,
+    });
+
+    if (error) {
+      setError(error.message);
+    } else {
+      setResetMessage('Password reset link sent! Please check your email.');
+    }
+    setLoading(false);
+  };
+
   return (
     <div className="flex-1 flex items-center justify-center min-h-[60vh]">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-serif text-gold font-bold mb-2">Welcome Back</h1>
-          <p className="text-white/60">Sign in to your premium account</p>
+          <p className="text-white/60">{isForgotPassword ? 'Reset your password' : 'Sign in to your premium account'}</p>
         </div>
 
         <Card variant="glass-dark" className="p-8">
-          <form onSubmit={handleLogin} className="space-y-6">
+          <form onSubmit={isForgotPassword ? handleResetPassword : handleLogin} className="space-y-6">
             {error && (
               <div className="p-3 bg-red-500/10 border border-red-500/50 rounded-lg text-red-500 text-sm text-center">
                 {error}
+              </div>
+            )}
+            {resetMessage && (
+              <div className="p-3 bg-green-500/10 border border-green-500/50 rounded-lg text-green-500 text-sm text-center">
+                {resetMessage}
               </div>
             )}
             
@@ -60,54 +90,49 @@ export default function LoginPage() {
               fullWidth
             />
             
-            <div className="space-y-2">
-              <Input
-                label="Password"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Enter your password"
-                required
-                fullWidth
-              />
-              <div className="flex justify-end">
-                <Link href="#" className="text-sm text-gold hover:text-gold/80 transition-colors">
-                  Forgot password?
-                </Link>
+            {!isForgotPassword && (
+              <div className="space-y-2">
+                <Input
+                  label="Password"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Enter your password"
+                  required
+                  fullWidth
+                />
+                <div className="flex justify-end">
+                  <button type="button" onClick={() => { setIsForgotPassword(true); setError(null); setResetMessage(null); }} className="text-sm text-gold hover:text-gold/80 transition-colors">
+                    Forgot password?
+                  </button>
+                </div>
               </div>
-            </div>
+            )}
 
             <Button type="submit" fullWidth disabled={loading}>
-              {loading ? 'Signing in...' : 'Sign In'}
+              {loading 
+                ? (isForgotPassword ? 'Sending Link...' : 'Signing in...') 
+                : (isForgotPassword ? 'Send Reset Link' : 'Sign In')}
             </Button>
+            
+            {isForgotPassword && (
+               <div className="text-center mt-4 text-sm text-white/60">
+                 Remember your password?{' '}
+                 <button type="button" onClick={() => { setIsForgotPassword(false); setError(null); setResetMessage(null); }} className="text-gold hover:text-gold/80 hover:underline transition-colors">
+                   Back to Login
+                 </button>
+               </div>
+            )}
           </form>
 
-          <div className="relative my-6">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-white/10"></div>
+          {!isForgotPassword && (
+            <div className="mt-8 pt-6 border-t border-white/10 text-center text-sm text-white/60">
+              Don't have an account?{' '}
+              <Link href="/auth/register" className="text-gold hover:text-gold/80 hover:underline transition-colors">
+                Create one
+              </Link>
             </div>
-            <div className="relative flex justify-center text-sm">
-              <span className="px-2 glass-dark text-white/50 rounded-full">Or continue with</span>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 gap-3">
-            <Button 
-              variant="outline" 
-              type="button" 
-              onClick={() => supabase.auth.signInWithOAuth({ provider: 'facebook' })} 
-              className="hover:bg-[#1877F2]/10 hover:text-[#1877F2] hover:border-[#1877F2]/50"
-            >
-              Facebook
-            </Button>
-          </div>
-
-          <div className="mt-6 text-center text-sm text-white/60">
-            Don't have an account?{' '}
-            <Link href="/auth/register" className="text-gold hover:text-gold/80 hover:underline transition-colors">
-              Create one
-            </Link>
-          </div>
+          )}
         </Card>
       </div>
     </div>

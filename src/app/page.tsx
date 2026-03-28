@@ -30,9 +30,40 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* Popular Section Built from Tags */}
+      {(() => {
+        const popCategory = safeCategories.find(c => c.name.toLowerCase() === 'popular');
+        const popularProducts = safeProducts
+          .filter(p => (p.tags && p.tags.includes('Popular')) || (popCategory && p.category_id === popCategory.id))
+          .slice(0, 5);
+
+        if (popularProducts.length === 0) return null;
+
+        return (
+          <section id="popular" className="scroll-mt-24">
+            <div className="flex items-end justify-between mb-8">
+              <h2 className="text-3xl font-serif text-gold font-bold">Popular</h2>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+              {popularProducts.map((product) => (
+                <ProductCard 
+                   key={product.id} 
+                   product={{
+                       ...product, 
+                       category: safeCategories.find(c => c.id === product.category_id)?.name || 'Popular'
+                   }} 
+                />
+              ))}
+            </div>
+          </section>
+        );
+      })()}
+
       {/* Categories Loop */}
-      <div className="flex flex-col gap-16">
-        {safeCategories.map((category) => {
+      <div className="flex flex-col gap-16 mt-16">
+        {safeCategories
+          .filter(c => c.name.toLowerCase() !== 'popular')
+          .map((category) => {
           const categoryProducts = safeProducts
             .filter(p => p.category_id === category.id)
             .slice(0, 5); // Take only first 5 for the homepage

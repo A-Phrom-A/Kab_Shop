@@ -1,57 +1,41 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { MessageSquare, Paperclip, Send, X, Image as ImageIcon, Video, Mic, ChevronDown, Smile } from 'lucide-react';
+import { MessageSquare, Paperclip, Send, X, Image as ImageIcon, Video, Mic, ChevronDown, Smile, Bot, ArrowLeft } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { usePathname } from 'next/navigation';
-
-const STICKERS = [
-  { id: 'Wecandoit', url: '/stickers/Wecandoit.png' },
-  { id: 'receive', url: '/stickers/receive.png' },
-  { id: 'wait', url: '/stickers/wait.png' },
-  { id: 'in_progress', url: '/stickers/in%20progress.png' },
-  { id: 'stun', url: '/stickers/stun.png' },
-  { id: 'cry', url: '/stickers/cry.png' },
-  { id: 'dizzy', url: '/stickers/dizzy.png' },
-  { id: 'Happy', url: '/stickers/Happy.png' },
-  { id: 'hello', url: '/stickers/hello.png' },
-  { id: 'sad', url: '/stickers/sad.png' },
-  { id: 'sorry', url: '/stickers/sorry.png' },
-  { id: 'Thank_you', url: '/stickers/Thank%20you.png' }
-];
+import { ProductCarousel } from './ProductCarousel';
 
 export function UserChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [session, setSession] = useState<any>(null);
+  
+  // 'menu', 'support' (human), 'ai_recommender', 'ai_support'
+  const [selectedRoomType, setSelectedRoomType] = useState<string>('menu');
   const [roomId, setRoomId] = useState<string | null>(null);
+  
   const [messages, setMessages] = useState<any[]>([]);
   const [inputText, setInputText] = useState('');
   const [uploading, setUploading] = useState(false);
-  const [showStickers, setShowStickers] = useState(false);
+  const [isReceivingAI, setIsReceivingAI] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
-
   useEffect(() => {
-    supabase.auth.getSession().then(({ data }) => {
-      setSession(data.session);
-      if (data.session) {
-        checkOrCreateRoom(data.session.user.id);
-      }
-    });
-
-    const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
-      setSession(session);
-      if (session) checkOrCreateRoom(session.user.id);
-    });
-
-    return () => {
-      authListener.subscription.unsubscribe();
-    };
+    supabase.auth.getSession().then(({ data }) => setSession(data.session));
+    const { data: listener } = supabase.auth.onAuthStateChange((_, session) => setSession(session));
+    return () => listener.subscription.unsubscribe();
   }, []);
 
+  // When selectedRoomType changes (and it's not menu), attach to the correct room
   useEffect(() => {
-    if (roomId) {
+    if (selectedRoomType !== 'menu' && session?.user?.id) {
+      checkOrCreateRoom(session.user.id, selectedRoomType);
+    }
+  }, [selectedRoomType, session]);
+
+  useEffect(() => {
+    if (roomId && selectedRoomType !== 'menu') {
       const channel = supabase
         .channel(`room:${roomId}`)
         .on('postgres_changes', { 
@@ -60,16 +44,24 @@ export function UserChatWidget() {
             table: 'chat_messages',
             filter: `room_id=eq.${roomId}`
         }, (payload) => {
-          setMessages(prev => [...prev, payload.new]);
+          // Add message to state
+          setMessages(prev => {
+            // Check if it already exists (optimistic updates)
+            if (prev.find(m => m.id === payload.new.id)) return prev;
+            return [...prev, payload.new];
+          });
+          
+          if (payload.new.sender_role === 'ai') {
+             setIsReceivingAI(false);
+          }
+          
           scrollToBottom();
         })
         .subscribe();
 
-      return () => {
-        supabase.removeChannel(channel);
-      };
+      return () => { supabase.removeChannel(channel); };
     }
-  }, [roomId]);
+  }, [roomId, selectedRoomType]);
 
   const scrollToBottom = () => {
     setTimeout(() => {
@@ -77,12 +69,15 @@ export function UserChatWidget() {
     }, 100);
   };
 
-  const checkOrCreateRoom = async (userId: string) => {
-    // Check if user already has a support room
+  const checkOrCreateRoom = async (userId: string, type: string) => {
+    setMessages([]);
+    setRoomId(null);
+    
+    // Check if user already has a room of this type
     const { data: existingRoom } = await supabase
       .from('chat_rooms')
       .select('id')
-      .eq('type', 'support')
+      .eq('type', type)
       .eq('participant1_id', userId)
       .single();
 
@@ -90,13 +85,12 @@ export function UserChatWidget() {
       setRoomId(existingRoom.id);
       fetchMessages(existingRoom.id);
     } else {
-      // Create new support room
+      // Create new room
       const { data: newRoom } = await supabase
         .from('chat_rooms')
         .insert({
-          type: 'support',
+          type: type,
           participant1_id: userId,
-          // participant2_id is null until an admin claims it, or just leave it null
         })
         .select('id')
         .single();
@@ -122,69 +116,56 @@ export function UserChatWidget() {
     if (!roomId || !session?.user) return;
     if (type === 'text' && !content.trim()) return;
 
-    await supabase.from('chat_messages').insert({
+    // Save to database
+    const { data: newMsg, error } = await supabase.from('chat_messages').insert({
       room_id: roomId,
       sender_id: session.user.id,
+      sender_role: 'user', // Note: we assume SQL migration added this
       message_type: type,
       content: content
-    });
+    }).select().single();
+
+    if (error) {
+       console.error("Insert error:", error);
+       return;
+    }
 
     if (type === 'text') setInputText('');
-  };
 
-  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>, type: 'image' | 'video' | 'audio') => {
-    if (!e.target.files || e.target.files.length === 0 || !roomId || !session?.user) return;
-    const file = e.target.files[0];
-    
-    if (file.size > 10 * 1024 * 1024) {
-      alert("File is too large. Maximum size is 10MB.");
-      return;
-    }
+    // If this is an AI room, we fire a request to the API
+    if (selectedRoomType === 'ai_recommender' || selectedRoomType === 'ai_support') {
+       setIsReceivingAI(true);
+       
+       // Format conversation for the AI API
+       const conversationContext = [...messages, newMsg].map(m => ({
+          role: m.sender_role === 'ai' ? 'assistant' : 'user',
+          content: m.content
+       }));
 
-    setUploading(true);
-    try {
-      const fileExt = file.name.split('.').pop();
-      const fileName = `${roomId}/${Date.now()}.${fileExt}`;
-      
-      const { error: uploadError } = await supabase.storage
-        .from('chat-media')
-        .upload(fileName, file);
-      
-      if (uploadError) throw uploadError;
-
-      const { data: { publicUrl } } = supabase.storage
-        .from('chat-media')
-        .getPublicUrl(fileName);
-
-      await sendMessage(type, publicUrl);
-    } catch (err: any) {
-      alert("Upload error: " + err.message);
-    } finally {
-      setUploading(false);
-    }
-  };
-
-  const renderMessageContent = (msg: any) => {
-    switch (msg.message_type) {
-      case 'image':
-        return <img src={msg.content} alt="Attachment" className="rounded-lg max-w-[200px] cursor-pointer" onClick={() => window.open(msg.content, '_blank')} />;
-      case 'video':
-        return <video src={msg.content} controls className="rounded-lg max-w-[200px]" />;
-      case 'audio':
-        return <audio src={msg.content} controls className="max-w-[200px]" />;
-      case 'sticker':
-        return <img src={msg.content} alt="Sticker" className="w-24 h-24 object-contain drop-shadow-md bg-transparent" />;
-      default:
-        return <p className="whitespace-pre-wrap break-words">{msg.content}</p>;
+       try {
+           const res = await fetch('/api/chat', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                 roomId,
+                 roomType: selectedRoomType,
+                 messages: conversationContext
+              })
+           });
+           
+           if (!res.ok) {
+              const errorText = await res.text();
+              throw new Error(`API Error ${res.status}: ${errorText}`);
+           }
+       } catch (e) {
+           console.error("AI fetch error:", e);
+           setIsReceivingAI(false);
+       }
     }
   };
 
-  // Don't show widget on admin pages
-  if (pathname.startsWith('/admin')) {
-    return null;
-  }
+  if (pathname.startsWith('/admin')) return null;
 
-  // If not logged in, clicking the button could redirect to login, or suggest logging in.
   if (!session) {
     return (
       <div className="fixed bottom-6 right-6 z-50">
@@ -195,21 +176,40 @@ export function UserChatWidget() {
     );
   }
 
+  const handleMenuSelect = (type: string) => {
+     setSelectedRoomType(type);
+  };
+
+  const handleBackToMenu = () => {
+     setSelectedRoomType('menu');
+     setRoomId(null);
+     setMessages([]);
+  };
+
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
       
       {/* Chat Window */}
       {isOpen && (
-        <div className="mb-4 w-[350px] h-[500px] max-h-[70vh] glass-dark rounded-2xl border border-white/20 shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-5 fade-in duration-300">
+        <div className="mb-4 w-[350px] h-[550px] max-h-[75vh] glass-dark rounded-2xl border border-white/20 shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-5 fade-in duration-300">
           
           {/* Header */}
-          <div className="p-4 bg-black/40 border-b border-white/10 flex items-center justify-between">
+          <div className="p-4 bg-black/60 border-b border-white/10 flex items-center justify-between">
             <div className="flex items-center gap-3">
+              {selectedRoomType !== 'menu' && (
+                 <button onClick={handleBackToMenu} className="text-white/50 hover:text-white transition-colors mr-1">
+                   <ArrowLeft size={18} />
+                 </button>
+              )}
               <div className="w-8 h-8 rounded-full bg-gold flex items-center justify-center text-black font-bold">
-                K
+                {selectedRoomType === 'menu' ? 'K' : selectedRoomType === 'support' ? 'H' : <Bot size={18} />}
               </div>
               <div>
-                <h3 className="font-bold text-white text-sm">kabshop Support</h3>
+                <h3 className="font-bold text-white text-sm">
+                   {selectedRoomType === 'menu' ? 'KabShop Support' :
+                    selectedRoomType === 'support' ? 'Talk to Admin' :
+                    selectedRoomType === 'ai_recommender' ? 'AI Recommender' : 'AI Help Center'}
+                </h3>
                 <p className="text-[10px] text-green-400 font-medium">Online</p>
               </div>
             </div>
@@ -218,92 +218,141 @@ export function UserChatWidget() {
             </button>
           </div>
 
-          {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4">
-            {messages.length === 0 ? (
-              <div className="text-center text-white/50 text-sm mt-10">
-                Send a message to start chatting with our support team.
-              </div>
-            ) : (
-              messages.map(msg => {
-                const isMine = msg.sender_id === session.user.id;
-                return (
-                  <div key={msg.id} className={`flex ${isMine ? 'justify-end' : 'justify-start'}`}>
-                    <div className={`max-w-[80%] rounded-2xl p-3 ${
-                      isMine ? 'bg-gold text-black rounded-tr-sm' : 'bg-black/60 border border-white/10 rounded-tl-sm'
-                    }`}>
-                      {renderMessageContent(msg)}
-                      <p className={`text-[10px] text-right mt-1 ${isMine ? 'text-black/60' : 'text-white/40'}`}>
-                        {new Date(msg.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                      </p>
-                    </div>
+          {/* MENU VIEW */}
+          {selectedRoomType === 'menu' && (
+             <div className="flex-1 flex flex-col p-6 items-center justify-center gap-4 bg-gradient-to-b from-black/20 to-transparent">
+                <div className="text-center mb-4">
+                   <MessageSquare className="w-12 h-12 text-gold mx-auto mb-2 opacity-50" />
+                   <h2 className="text-white font-bold text-lg">How can we help?</h2>
+                   <p className="text-white/50 text-xs mt-1">Select an option below to get started</p>
+                </div>
+
+                <button 
+                  onClick={() => handleMenuSelect('support')}
+                  className="w-full bg-white/5 hover:bg-white/10 border border-white/10 p-4 rounded-xl flex items-center gap-4 text-left transition-all hover:scale-105"
+                >
+                  <div className="bg-blue-500/20 text-blue-400 p-2 rounded-lg">
+                    <MessageSquare size={20} />
                   </div>
-                );
-              })
-            )}
-            <div ref={messagesEndRef} />
-          </div>
-
-          {/* Input */}
-          <div className="relative p-3 bg-black/40 border-t border-white/10">
-            {/* Stickers Drawer */}
-            {showStickers && (
-              <div className="absolute bottom-full left-0 right-0 mb-2 mx-3 bg-neutral-900 border border-white/20 rounded-xl p-3 shadow-2xl z-50 animate-in fade-in slide-in-from-bottom-2">
-                <div className="flex justify-between items-center mb-2 px-1">
-                  <span className="text-xs font-bold text-white/50 uppercase tracking-wider">Stickers</span>
-                  <button onClick={() => setShowStickers(false)} className="text-white/40 hover:text-white"><X size={14}/></button>
-                </div>
-                <div className="grid grid-cols-4 gap-2 max-h-[160px] overflow-y-auto p-1 custom-scrollbar">
-                  {STICKERS.map(s => (
-                    <button 
-                      key={s.id} 
-                      onClick={() => {
-                        sendMessage('sticker', s.url);
-                        setShowStickers(false);
-                      }}
-                      className="hover:scale-110 hover:bg-white/5 transition-all p-1 rounded-lg flex items-center justify-center pointer-events-auto"
-                    >
-                      <img src={s.url} alt={s.id} className="w-16 h-16 object-contain" />
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            <div className="flex bg-black/40 border border-white/10 rounded-xl overflow-hidden focus-within:border-gold transition-colors">
-              <div className="flex items-center pl-2 gap-1 text-white/50">
-                <label className="p-1.5 hover:text-gold hover:bg-white/5 rounded-full cursor-pointer transition-colors" title="Image">
-                  <ImageIcon size={16} />
-                  <input type="file" accept="image/*" className="hidden" onChange={(e) => handleFileUpload(e, 'image')} disabled={uploading} />
-                </label>
-                <label className="p-1.5 hover:text-gold hover:bg-white/5 rounded-full cursor-pointer transition-colors" title="Video">
-                  <Video size={16} />
-                  <input type="file" accept="video/mp4,video/quicktime,video/webm" className="hidden" onChange={(e) => handleFileUpload(e, 'video')} disabled={uploading} />
-                </label>
-                <button onClick={() => setShowStickers(!showStickers)} className={`p-1.5 rounded-full transition-colors ${showStickers ? 'text-gold bg-white/10' : 'hover:text-gold hover:bg-white/5'}`} title="Sticker">
-                  <Smile size={16} />
+                  <div>
+                    <p className="text-white font-semibold text-sm">Talk to Admin</p>
+                    <p className="text-white/40 text-xs">Reach a human support agent</p>
+                  </div>
                 </button>
+
+                <button 
+                  onClick={() => handleMenuSelect('ai_recommender')}
+                  className="w-full bg-white/5 hover:bg-white/10 border border-white/10 p-4 rounded-xl flex items-center gap-4 text-left transition-all hover:scale-105"
+                >
+                  <div className="bg-gold/20 text-gold p-2 rounded-lg">
+                    <Bot size={20} />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold text-sm">AI Recommender</p>
+                    <p className="text-white/40 text-xs">Let AI find the perfect product</p>
+                  </div>
+                </button>
+
+                <button 
+                  onClick={() => handleMenuSelect('ai_support')}
+                  className="w-full bg-white/5 hover:bg-white/10 border border-white/10 p-4 rounded-xl flex items-center gap-4 text-left transition-all hover:scale-105"
+                >
+                  <div className="bg-green-500/20 text-green-400 p-2 rounded-lg">
+                    <MessageSquare size={20} />
+                  </div>
+                  <div>
+                    <p className="text-white font-semibold text-sm">AI Help Center</p>
+                    <p className="text-white/40 text-xs">FAQs, Order Status, Policies</p>
+                  </div>
+                </button>
+             </div>
+          )}
+
+          {/* CHAT VIEW */}
+          {selectedRoomType !== 'menu' && (
+            <>
+              {/* Messages */}
+              <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                {messages.length === 0 ? (
+                  <div className="text-center text-white/50 text-sm mt-10">
+                    Send a message to start chatting in this room.
+                  </div>
+                ) : (
+                  messages.map(msg => {
+                    const isMine = msg.sender_id === session.user.id || msg.sender_role === 'user';
+                    
+                    // Parse Generative UI tags (e.g., $$PRODUCT_IDS: id1,id2$$)
+                    let displayContent = msg.content;
+                    let productIds: string[] = [];
+                    
+                    const productMatch = displayContent.match(/\$\$PRODUCT_IDS:\s*([a-zA-Z0-9\-_,]+)\$\$/);
+                    if (productMatch) {
+                       productIds = productMatch[1].split(',').filter(Boolean);
+                       displayContent = displayContent.replace(productMatch[0], '').trim();
+                    }
+
+                    return (
+                      <div key={msg.id} className={`flex ${isMine ? 'justify-end' : 'justify-start'} flex-col gap-2`}>
+                        <div className={`flex ${isMine ? 'justify-end' : 'justify-start'}`}>
+                          <div className={`max-w-[85%] rounded-2xl p-3 ${
+                            isMine ? 'bg-gold text-black rounded-tr-sm' : 'bg-black/60 border border-white/10 rounded-tl-sm'
+                          }`}>
+                            <p className={`whitespace-pre-wrap break-words text-sm leading-relaxed ${!isMine && 'text-white/90'}`}>
+                               {displayContent}
+                            </p>
+                            <p className={`text-[10px] text-right mt-1 ${isMine ? 'text-black/60' : 'text-white/40'}`}>
+                              {new Date(msg.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                            </p>
+                          </div>
+                        </div>
+                        
+                        {/* Render Generative UI below the chat bubble if product IDs exist */}
+                        {productIds.length > 0 && !isMine && (
+                           <div className="pl-2 w-full max-w-[320px]">
+                              <ProductCarousel ids={productIds} />
+                           </div>
+                        )}
+                      </div>
+                    );
+                  })
+                )}
+                {isReceivingAI && (
+                   <div className="flex justify-start">
+                     <div className="max-w-[85%] rounded-2xl p-3 bg-black/60 border border-white/10 rounded-tl-sm flex items-center gap-2">
+                       <div className="w-1.5 h-1.5 bg-white/50 rounded-full animate-bounce" />
+                       <div className="w-1.5 h-1.5 bg-white/50 rounded-full animate-bounce [animation-delay:0.2s]" />
+                       <div className="w-1.5 h-1.5 bg-white/50 rounded-full animate-bounce [animation-delay:0.4s]" />
+                     </div>
+                   </div>
+                )}
+                <div ref={messagesEndRef} />
               </div>
-              <input 
-                type="text"
-                value={inputText}
-                onChange={(e) => setInputText(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter') sendMessage('text', inputText);
-                }}
-                disabled={uploading}
-                placeholder="Type a message..."
-                className="flex-1 bg-transparent px-2 py-3 text-sm outline-none w-full"
-              />
-              <button 
-                onClick={() => sendMessage('text', inputText)}
-                disabled={!inputText.trim() || uploading}
-                className="px-3 text-gold hover:text-gold/80 disabled:opacity-50 transition-colors"
-              >
-                {uploading ? <div className="w-4 h-4 border-2 border-gold border-t-transparent rounded-full animate-spin"/> : <Send size={18} />}
-              </button>
-            </div>
-          </div>
+
+              {/* Input */}
+              <div className="relative p-3 bg-black/40 border-t border-white/10">
+                <div className="flex bg-black/40 border border-white/10 rounded-xl overflow-hidden focus-within:border-gold transition-colors">
+                  <input 
+                    type="text"
+                    value={inputText}
+                    onChange={(e) => setInputText(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') sendMessage('text', inputText);
+                    }}
+                    disabled={uploading || isReceivingAI}
+                    placeholder="Type a message..."
+                    className="flex-1 bg-transparent px-3 py-3 text-sm outline-none w-full text-white placeholder-white/40"
+                  />
+                  <button 
+                    onClick={() => sendMessage('text', inputText)}
+                    disabled={!inputText.trim() || uploading || isReceivingAI}
+                    className="px-4 text-gold hover:bg-white/5 disabled:opacity-50 transition-colors"
+                  >
+                    {uploading ? <div className="w-4 h-4 border-2 border-gold border-t-transparent rounded-full animate-spin"/> : <Send size={18} />}
+                  </button>
+                </div>
+              </div>
+            </>
+          )}
 
         </div>
       )}

@@ -21,6 +21,13 @@ export default function AdminOrdersPage() {
   const [updatingId, setUpdatingId] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   
+  // Prompt States
+  const [trackingPromptOrderId, setTrackingPromptOrderId] = useState<string | null>(null);
+  const [trackingNumberInput, setTrackingNumberInput] = useState("");
+  
+  const [cancelPromptOrderId, setCancelPromptOrderId] = useState<string | null>(null);
+  const [cancelReasonInput, setCancelReasonInput] = useState("");
+  
   const fetchOrders = async () => {
     setLoading(true);
     const { data } = await supabase
@@ -36,13 +43,25 @@ export default function AdminOrdersPage() {
     fetchOrders();
   }, []);
 
-  const handleUpdateStatus = async (orderId: string, newStatus: number) => {
+  const handleUpdateStatus = async (orderId: string, newStatus: number, tracking?: string, cancelReason?: string) => {
+    if (newStatus === 2 && !tracking) {
+      setTrackingPromptOrderId(orderId);
+      return;
+    }
+    if (newStatus === 3 && !cancelReason) {
+      setCancelPromptOrderId(orderId);
+      return;
+    }
+
     setUpdatingId(orderId);
     
-    // This update will trigger the deduct_stock_on_payment() SQL function if transitioning from 4 to 2 (or 1)
+    const updates: any = { status: newStatus };
+    if (tracking !== undefined) updates.tracking_number = tracking;
+    if (cancelReason !== undefined) updates.cancellation_reason = cancelReason;
+
     const { error } = await supabase
       .from('orders')
-      .update({ status: newStatus })
+      .update(updates)
       .eq('id', orderId);
 
     if (error) {
@@ -50,7 +69,12 @@ export default function AdminOrdersPage() {
     } else {
       await fetchOrders(); // Refresh table
     }
+    
     setUpdatingId(null);
+    setTrackingPromptOrderId(null);
+    setTrackingNumberInput("");
+    setCancelPromptOrderId(null);
+    setCancelReasonInput("");
   };
 
   if (loading) {
@@ -137,6 +161,12 @@ export default function AdminOrdersPage() {
                       }`}>
                         {STATUS_MAP[order.status] || 'Unknown'}
                       </span>
+                      {order.tracking_number && (
+                        <p className="text-[11px] text-white/50 mt-1">Tracking: <span className="text-white/80">{order.tracking_number}</span></p>
+                      )}
+                      {order.cancellation_reason && order.status === 3 && (
+                        <p className="text-[11px] text-red-400 mt-1">Reason: {order.cancellation_reason}</p>
+                      )}
                       
                       {order.status === 4 && (
                         <div className="flex gap-2 mt-2">
@@ -179,7 +209,7 @@ export default function AdminOrdersPage() {
       {/* Image Modal overlay */}
       {selectedImage && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm transition-all"
           onClick={() => setSelectedImage(null)}
         >
           <div className="relative max-w-2xl w-full max-h-[90vh] flex flex-col items-center">
@@ -202,6 +232,61 @@ export default function AdminOrdersPage() {
             </div>
             <p className="text-white/50 text-sm mt-4 text-center">Click outside or press X to close</p>
           </div>
+        </div>
+      )}
+
+      {/* Tracking Modal */}
+      {trackingPromptOrderId && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4 backdrop-blur-sm">
+           <Card variant="glass-dark" className="max-w-md w-full !p-6 border-blue-500/30">
+               <h3 className="text-xl font-bold text-blue-400 mb-2">Ship Order</h3>
+               <p className="text-sm text-white/60 mb-6">Please enter the tracking number (e.g. Kerry, Flash) before marking this order as shipped.</p>
+               <input 
+                 autoFocus
+                 type="text" 
+                 value={trackingNumberInput}
+                 onChange={e => setTrackingNumberInput(e.target.value)}
+                 placeholder="Enter Tracking Number..."
+                 className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white focus:border-blue-400 focus:outline-none mb-6"
+               />
+               <div className="flex justify-end gap-3">
+                 <Button variant="secondary" onClick={() => {
+                   setTrackingPromptOrderId(null);
+                   setTrackingNumberInput("");
+                 }}>Cancel</Button>
+                 <Button onClick={() => handleUpdateStatus(trackingPromptOrderId, 2, trackingNumberInput, undefined)} disabled={!trackingNumberInput.trim() || updatingId !== null}>
+                    Confirm & Ship
+                 </Button>
+               </div>
+           </Card>
+        </div>
+      )}
+
+      {/* Cancel Reason Modal */}
+      {cancelPromptOrderId && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 px-4 backdrop-blur-sm">
+           <Card variant="glass-dark" className="max-w-md w-full !p-6 border-red-500/30">
+               <h3 className="text-xl font-bold text-red-400 mb-2">Cancel Order</h3>
+               <p className="text-sm text-white/60 mb-6">Please provide a reason for cancelling this order. The customer will see this message.</p>
+               <textarea 
+                 autoFocus
+                 value={cancelReasonInput}
+                 onChange={e => setCancelReasonInput(e.target.value)}
+                 placeholder="e.g. Out of stock, Fake proof of payment..."
+                 className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white focus:border-red-400 focus:outline-none mb-6 resize-none h-24"
+               ></textarea>
+               <div className="flex justify-end gap-3">
+                 <Button variant="secondary" onClick={() => {
+                   setCancelPromptOrderId(null);
+                   setCancelReasonInput("");
+                 }}>Back</Button>
+                 <Button onClick={() => handleUpdateStatus(cancelPromptOrderId, 3, undefined, cancelReasonInput)} 
+                         disabled={!cancelReasonInput.trim() || updatingId !== null}
+                         className="!bg-red-500 hover:!bg-red-600 !text-white !border-0">
+                    Confirm Cancellation
+                 </Button>
+               </div>
+           </Card>
         </div>
       )}
     </div>

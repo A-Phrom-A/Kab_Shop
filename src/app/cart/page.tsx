@@ -157,7 +157,7 @@ export default function CartPage() {
               <div className="col-span-1 sm:col-span-6 flex items-center gap-4">
                 <div className="w-20 h-20 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden flex-shrink-0">
                   {item.image_url ? (
-                    <img src={item.image_url} alt={item.name} className="object-cover w-full h-full" />
+                    <img src={item.image_url} alt={item.name} className="object-contain w-full h-full" />
                   ) : (
                     <span className="text-[10px] text-white/20">Img</span>
                   )}

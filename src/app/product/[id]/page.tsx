@@ -6,6 +6,7 @@ import { supabase } from '@/lib/supabase';
 import { Button } from '@/components/ui/Button';
 import { useCartStore } from '@/store/useCartStore';
 import { ShoppingCart, ArrowLeft, CheckCircle2, X, ZoomIn } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -22,6 +23,7 @@ export default function ProductDetailPage() {
   const [isZooming, setIsZooming] = useState(false);
   const [zoomPosition, setZoomPosition] = useState({ x: 0, y: 0 });
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const scrollContainerRef = React.useRef<HTMLDivElement>(null);
 
   const addItemToCart = useCartStore((state) => state.addItem);
 
@@ -66,6 +68,21 @@ export default function ProductDetailPage() {
 
     fetchProduct();
   }, [id]);
+
+  useEffect(() => {
+    const el = scrollContainerRef.current;
+    if (!el) return;
+
+    const handleWheel = (e: WheelEvent) => {
+      if (e.deltaY !== 0) {
+        e.preventDefault();
+        el.scrollLeft += e.deltaY;
+      }
+    };
+
+    el.addEventListener('wheel', handleWheel, { passive: false });
+    return () => el.removeEventListener('wheel', handleWheel);
+  }, [product]); // Dependency on product so it binds after loading
 
   if (loading) {
     return (
@@ -121,7 +138,7 @@ export default function ProductDetailPage() {
           >
             {images[activeImage] ? (
               <>
-                <img src={images[activeImage]} alt={product.name} className="object-cover w-full h-full transition-opacity group-hover:opacity-0" />
+                <Image src={images[activeImage]} alt={product.name} fill priority sizes="(max-width: 768px) 100vw, 50vw" className="object-contain transition-opacity group-hover:opacity-0" />
                 <div 
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
                   style={{
@@ -143,15 +160,18 @@ export default function ProductDetailPage() {
             )}
           </div>
           
-          <div className="flex gap-4 overflow-x-auto pb-2">
+          <div 
+            ref={scrollContainerRef}
+            className="flex gap-4 overflow-x-auto pb-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          >
             {images.map((img: string | null, idx: number) => (
               <button
                 key={idx}
                 onClick={() => setActiveImage(idx)}
-                className={`w-24 h-24 flex-shrink-0 rounded-xl border-2 overflow-hidden flex items-center justify-center transition-all ${activeImage === idx ? 'border-gold' : 'border-transparent bg-black/20 opacity-80 hover:opacity-100'}`}
+                className={`relative w-24 h-24 flex-shrink-0 rounded-xl border-2 overflow-hidden flex items-center justify-center transition-all ${activeImage === idx ? 'border-gold' : 'border-transparent bg-black/20 opacity-80 hover:opacity-100'}`}
               >
                 {img ? (
-                  <img src={img} alt={`Thumbnail ${idx}`} className="object-cover w-full h-full" />
+                  <Image src={img} alt={`Thumbnail ${idx}`} fill sizes="96px" className="object-contain" />
                 ) : (
                   <span className="text-[10px] text-white/20">Img {idx+1}</span>
                 )}
@@ -252,11 +272,13 @@ export default function ProductDetailPage() {
             <X size={24} />
           </button>
           
-          <div className="relative max-w-[90vw] max-h-[90vh] flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
-            <img 
+          <div className="relative w-full max-w-[90vw] h-[85vh] flex items-center justify-center pointer-events-none" onClick={(e) => e.stopPropagation()}>
+            <Image 
               src={images[activeImage]} 
               alt={product.name} 
-              className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl" 
+              fill
+              sizes="100vw"
+              className="object-contain rounded-lg shadow-2xl pointer-events-auto" 
             />
             
             {/* Lightbox Thumbnails */}
@@ -265,9 +287,9 @@ export default function ProductDetailPage() {
                 <button
                   key={idx}
                   onClick={(e) => { e.stopPropagation(); setActiveImage(idx); }}
-                  className={`w-14 h-14 rounded-md overflow-hidden border-2 transition-all ${activeImage === idx ? 'border-gold scale-110' : 'border-white/20 opacity-50 hover:opacity-100'}`}
+                  className={`relative w-14 h-14 rounded-md overflow-hidden border-2 transition-all pointer-events-auto ${activeImage === idx ? 'border-gold scale-110' : 'border-white/20 opacity-50 hover:opacity-100'}`}
                 >
-                  <img src={img} alt={`Thumb ${idx}`} className="w-full h-full object-cover" />
+                  <Image src={img} alt={`Thumb ${idx}`} fill sizes="56px" className="object-contain" />
                 </button>
               ))}
             </div>

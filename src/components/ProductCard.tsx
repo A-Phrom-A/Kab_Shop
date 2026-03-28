@@ -13,7 +13,8 @@ interface ProductCardProps {
     price: number;
     cost?: number;
     category?: string;
-    image_url: string | null;
+    image_url?: string | null;
+    image_urls?: string[];
   };
 }
 
@@ -25,18 +26,22 @@ export function ProductCard({ product }: ProductCardProps) {
   const handleAddToCart = (e: React.MouseEvent) => {
     e.stopPropagation();
     e.preventDefault();
-    addItem(product);
+    addItem({ ...product, image_url: displayImage });
   };
+
+  const displayImage = product.image_url || (product.image_urls && product.image_urls.length > 0 ? product.image_urls[0] : null);
 
   return (
     <Link href={`/product/${product.id}`} className="block h-full cursor-pointer hover:-translate-y-1 transition-transform duration-300">
       <Card className="group flex flex-col h-full !p-0">
         <div className="aspect-square bg-white/5 relative overflow-hidden">
-          {product.image_url ? (
-            <img 
-              src={product.image_url} 
-              alt={product.name} 
-              className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" 
+          {displayImage ? (
+            <Image 
+              src={displayImage} 
+              alt={product.name}
+              fill
+              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+              className="object-contain group-hover:scale-105 transition-transform duration-500" 
             />
           ) : (
             <div className="w-full h-full flex flex-col items-center justify-center text-white/20 p-4 text-center">

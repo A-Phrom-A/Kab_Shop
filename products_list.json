@@ -1,0 +1,2815 @@
+[
+  {
+    "id": "fb02cb54-d667-497d-a790-65389f15b087",
+    "name": "Zebra 'Physics Lab Manual V2'",
+    "sku": "KAB-SCI-002",
+    "category_id": "30e981a5-892f-4347-b012-30853368be54",
+    "price": 569.45,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715382502-0.8447601800758369.png"
+    ],
+    "description": "Educational Zebra Physics Lab Manual V2 workbook.",
+    "specs": {
+      "vol": "2",
+      "subject": "Physics"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 341.67
+  },
+  {
+    "id": "136dac69-59ac-4332-8e91-46751cc99d0b",
+    "name": "Uni 'A6 Grid Journal'",
+    "sku": "KAB-NOT-005",
+    "category_id": "4de8cc8c-466b-46fb-b99e-66fd6fee3245",
+    "price": 454.65,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713411890-0.35878562743127673.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713411895-0.050640107294132486.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713411896-0.27310219646603495.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713411896-0.9662872243878584.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713411896-0.3452039244811098.png"
+    ],
+    "description": "Compact Uni A6 Grid Journal, ideal for capturing ideas on the go.",
+    "specs": {
+      "size": "A6",
+      "style": "Grid",
+      "portability": "High"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "For Journey"
+    ],
+    "cost": 272.79
+  },
+  {
+    "id": "0b93e768-1314-4d43-b3da-2d13c19af05b",
+    "name": "Zebra 'Gel Ink Fineliner 0.7mm'",
+    "sku": "KAB-PEN-004",
+    "category_id": "56e887c1-9f93-41c0-ba2a-f158c7a7694e",
+    "price": 237.3,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658373118-0.5705755517868923.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658373118-0.7143290046986547.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658373118-0.16267627379197225.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658373118-0.7178565585032985.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658373118-0.03234809912377812.png"
+    ],
+    "description": "Smooth writing Zebra Gel Ink Fineliner with consistent 0.7mm output.",
+    "specs": {
+      "grip": "Rubberized",
+      "ink_type": "Gel",
+      "tip_size": "0.7mm"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money"
+    ],
+    "cost": 142.38
+  },
+  {
+    "id": "0cf4e308-164b-44bb-af6c-f29bf4127725",
+    "name": "Uni 'Precision Ruler 60cm'",
+    "sku": "KAB-VAR-006",
+    "category_id": "68c7ea8a-5dcd-4e19-8009-c92b7f99d706",
+    "price": 383.95,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711373991-0.9040358725725463.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711373991-0.6435929766274938.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711373991-0.8635666536846311.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711373991-0.5486063454907046.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711373991-0.05978365238991401.png"
+    ],
+    "description": "High-precision Uni 60cm Ruler, essential for engineering and technical drawing.",
+    "specs": {
+      "length": "60cm",
+      "marking": "Laser Etched",
+      "material": "Stainless Steel"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical"
+    ],
+    "cost": 230.37
+  },
+  {
+    "id": "062099f4-6265-4c0f-918a-a10c28c3214d",
+    "name": "Muji 'Ancient Civilizations Vol.1'",
+    "sku": "KAB-HIS-001",
+    "category_id": "cfe3bc32-e4fe-429f-9b7d-89d3fc33209e",
+    "price": 553.7,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714934842-0.572961755792878.png"
+    ],
+    "description": "Minimalist Muji Ancient Civilizations Vol.1, blending design with deep knowledge.",
+    "specs": {
+      "style": "Minimalist",
+      "binding": "Softcover",
+      "content": "Ancient History"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Minimal",
+      "Education"
+    ],
+    "cost": 332.22
+  },
+  {
+    "id": "1934c633-4e47-46f5-992b-9886fda76859",
+    "name": "Tombow 'Graphite Pro 9H'",
+    "sku": "KAB-PNC-009",
+    "category_id": "871242c9-2620-4548-af3d-71b1956fe7cb",
+    "price": 76.65,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641836795-0.06410361360150729.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641836795-0.3536075871867853.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641836795-0.043639986574007694.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641836795-0.17470234438448418.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641836795-0.8607164298356036.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641836795-0.41418185295910304.png"
+    ],
+    "description": "Extra-hard Tombow Graphite Pro 9H for specialized technical applications.",
+    "specs": {
+      "core": "Extra Hard",
+      "hardness": "9H",
+      "application": "Lithography"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good"
+    ],
+    "cost": 45.99
+  },
+  {
+    "id": "23f5029a-d180-4f51-a26d-c8da2edc91b7",
+    "name": "Tombow 'Dust-Free Block Mini-3'",
+    "sku": "KAB-ERA-003",
+    "category_id": "240d9425-f2e3-479a-bfe9-700bea7abf8d",
+    "price": 101.5,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647648342-0.984535228663242.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647648343-0.8899777510100387.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647648343-0.19840481737547477.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647648343-0.6046615521297172.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647648343-0.775904371902316.png"
+    ],
+    "description": "Eco-friendly Tombow Dust-Free Mini-3 eraser, small but effective.",
+    "specs": {
+      "size": "Mini",
+      "type": "PVC-Free Eraser"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good"
+    ],
+    "cost": 60.9
+  },
+  {
+    "id": "d94c09c0-693f-45df-bfcb-d6bf30f79f3f",
+    "name": "Lamy 'Physics Lab Manual V9'",
+    "sku": "KAB-SCI-009",
+    "category_id": "30e981a5-892f-4347-b012-30853368be54",
+    "price": 708.4,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715343038-0.8122800174083616.png"
+    ],
+    "description": "Lamy Physics Lab Manual V9, covering nuclear experiments.",
+    "specs": {
+      "edition": "V9",
+      "subject": "Nuclear Physics"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 425.04
+  },
+  {
+    "id": "163d3b73-301f-472a-bff8-9e8d068c6792",
+    "name": "Faber-Castell 'World History Outline Pt.10'",
+    "sku": "KAB-SOC-0010",
+    "category_id": "ccc8718c-84b6-4370-af0a-83c0e040fd3d",
+    "price": 592.55,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715587222-0.43740437979129987.png"
+    ],
+    "description": "In-depth Faber-Castell World History Outline Pt.10 for academic excellence.",
+    "specs": {
+      "subject": "Global History",
+      "series_part": "10"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 355.53
+  },
+  {
+    "id": "1adc35e7-b63a-447f-998b-cb55b87067c9",
+    "name": "Rotring 'World History Outline Pt.2'",
+    "sku": "KAB-SOC-002",
+    "category_id": "ccc8718c-84b6-4370-af0a-83c0e040fd3d",
+    "price": 603.4,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715635829-0.35499370559540355.png"
+    ],
+    "description": "Rotring World History Outline Pt.2, focusing on key historical developments.",
+    "specs": {
+      "subject": "Medieval History",
+      "series_part": "2"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education",
+      "Mechanical"
+    ],
+    "cost": 362.04
+  },
+  {
+    "id": "2b5998a0-8b34-4f3c-a507-3464f20722f7",
+    "name": "4 in 1 packet",
+    "sku": "test",
+    "category_id": "b47c0db2-f1f5-4f82-925b-c29bb3a0fabb",
+    "price": 1500,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715835710-0.8702732541358403.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715835710-0.6610602303398425.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715835710-0.6967084293901186.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715835710-0.051460705384540395.png"
+    ],
+    "description": "4 in 1",
+    "specs": {
+      "test": "nakub"
+    },
+    "created_at": "2026-03-28T16:37:19.708543+00:00",
+    "tags": [
+      "Education",
+      "Popular",
+      "New"
+    ],
+    "cost": 1200
+  },
+  {
+    "id": "8f3b04b2-91d0-414b-b218-5c9dc4b115df",
+    "name": "Moleskine 'Graphite Pro 5H'",
+    "sku": "KAB-PNC-005",
+    "category_id": "871242c9-2620-4548-af3d-71b1956fe7cb",
+    "price": 243.25,
+    "stock": 98,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641865780-0.7054763610471237.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641865780-0.8872904594329962.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641865780-0.0059018452491195195.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641865780-0.06346632958527676.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641865780-0.4612582140119853.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641865781-0.7103356793509913.png"
+    ],
+    "description": "Premium Moleskine Graphite Pro 5H for high-quality drafting work.",
+    "specs": {
+      "lead": "5H",
+      "brand": "Luxury Stationery"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money"
+    ],
+    "cost": 145.95
+  },
+  {
+    "id": "a8e73af1-f0b7-4367-8dad-17f50e68ba9a",
+    "name": "Tombow 'Graphite Pro 6H'",
+    "sku": "KAB-PNC-006",
+    "category_id": "871242c9-2620-4548-af3d-71b1956fe7cb",
+    "price": 114.1,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641944570-0.5737105549694798.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641944570-0.9074104562597518.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641944570-0.2680697213892209.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641944570-0.02126257546911725.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641944570-0.06562646474341338.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641944570-0.4735545449082613.png"
+    ],
+    "description": "Hardcore Tombow Graphite Pro 6H for long-lasting precision marking.",
+    "specs": {
+      "body": "Enamel Finish",
+      "hardness": "6H"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good"
+    ],
+    "cost": 68.46
+  },
+  {
+    "id": "0a99f57c-ecbf-4e9e-b6bf-952e09c5a627",
+    "name": "Faber-Castell 'Tape Runner Pro V1'",
+    "sku": "KAB-COR-001",
+    "category_id": "dd78ae84-efb4-4b7f-8e14-9f1f1c4aef27",
+    "price": 231.35,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657830039-0.5273715565074371.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657830039-0.27744846571486803.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657830039-0.3401869642902092.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657830039-0.7717452386911009.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657830039-0.27206267729841205.png"
+    ],
+    "description": "Professional grade Faber-Castell Tape Runner Pro V1 for precision crafting.",
+    "specs": {
+      "type": "Adhesive",
+      "mechanism": "Roller",
+      "refillable": true
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Creative"
+    ],
+    "cost": 138.81
+  },
+  {
+    "id": "a615239d-07f4-4c26-a0e4-d4cb94330cbb",
+    "name": "Lamy 'Tape Runner Pro V3'",
+    "sku": "KAB-COR-003",
+    "category_id": "dd78ae84-efb4-4b7f-8e14-9f1f1c4aef27",
+    "price": 180.95,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657887097-0.3418841225458138.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657887097-0.9774984976700338.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657887097-0.4028430169439058.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657887097-0.3875457022493908.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657887097-0.9062979128608729.png"
+    ],
+    "description": "Compact Lamy Tape Runner Pro V3 for high-quality crafting adhesive.",
+    "specs": {
+      "type": "Adhesive",
+      "brand": "Lamy"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good",
+      "Creative"
+    ],
+    "cost": 108.57
+  },
+  {
+    "id": "ea3c2573-632d-4cf9-bba2-753e168b08b8",
+    "name": "Faber-Castell 'Gel Ink Fineliner 0.4mm'",
+    "sku": "KAB-PEN-006",
+    "category_id": "56e887c1-9f93-41c0-ba2a-f158c7a7694e",
+    "price": 307.3,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658501820-0.44850415244562936.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658501821-0.23633443331416604.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658501821-0.9014097428650368.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658501821-0.23372014702836563.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658501821-0.7532123496085732.png"
+    ],
+    "description": "Standard Faber-Castell 0.4mm Gel Fineliner for office work.",
+    "specs": {
+      "ink": "Permanent",
+      "tip": "0.4mm",
+      "color": "Black"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money"
+    ],
+    "cost": 184.38
+  },
+  {
+    "id": "8b18b51a-b736-4ea7-951f-2f58fc87ad2f",
+    "name": "Pentel 'Precision Ruler 100cm'",
+    "sku": "KAB-VAR-0010",
+    "category_id": "68c7ea8a-5dcd-4e19-8009-c92b7f99d706",
+    "price": 366.1,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711489633-0.21396595238470795.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711489633-0.8434464644080988.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711489633-0.5727268524766981.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711489633-0.6871571567479664.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711489633-0.22325502525949992.png"
+    ],
+    "description": "Full 1-meter Pentel Precision Ruler for industrial-scale drafting.",
+    "specs": {
+      "length": "100cm",
+      "material": "Heavy Duty Aluminum"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical"
+    ],
+    "cost": 219.66
+  },
+  {
+    "id": "e8a6c99e-c8e1-4ded-851c-8d36dc0d04c9",
+    "name": "Moleskine 'Precision Ruler 10cm'",
+    "sku": "KAB-VAR-001",
+    "category_id": "68c7ea8a-5dcd-4e19-8009-c92b7f99d706",
+    "price": 380.45,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711619136-0.7424513388783336.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711619136-0.48963561783345555.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711619136-0.1251699480854752.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711619136-0.8288816281142026.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711619136-0.3370064376502774.png"
+    ],
+    "description": "Ultra-compact Moleskine 10cm Precision Ruler for small bags.",
+    "specs": {
+      "length": "10cm",
+      "material": "High Grade Resin"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical"
+    ],
+    "cost": 228.27
+  },
+  {
+    "id": "02bd2ebc-53ba-4961-8928-d7c26511144c",
+    "name": "Pentel 'A4 Grid Journal'",
+    "sku": "KAB-NOT-006",
+    "category_id": "4de8cc8c-466b-46fb-b99e-66fd6fee3245",
+    "price": 556.5,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713432130-0.7603297676466113.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713432131-0.5462969389842197.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713432131-0.7965056908811371.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713432131-0.1719761098924406.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713432131-0.04621096530542268.png"
+    ],
+    "description": "High-grade Pentel A4 Grid Journal, perfect for architects and designers.",
+    "specs": {
+      "style": "Grid",
+      "binding": "Thread Bound",
+      "paper_size": "A4"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "For Journey",
+      "New"
+    ],
+    "cost": 333.9
+  },
+  {
+    "id": "59e933b2-d782-4d7f-8f4e-4d250b644592",
+    "name": "Tombow 'Field Notes A6 Vol.1'",
+    "sku": "KAB-POC-001",
+    "category_id": "9cedad56-4485-4f1a-bfe8-f4746614a55f",
+    "price": 427.35,
+    "stock": 99,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714257713-0.8844560645526752.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714257714-0.522387784246307.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714257714-0.871468393163218.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714257714-0.9654583492167469.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714257714-0.9916743160023196.png"
+    ],
+    "description": "The original Tombow Field Notes A6 Vol.1 for rugged note-taking.",
+    "specs": {
+      "vol": "1",
+      "type": "Field Book",
+      "format": "A6"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money"
+    ],
+    "cost": 256.41
+  },
+  {
+    "id": "595acce6-8083-40b9-a207-bd51e41362fc",
+    "name": "Pilot 'Advanced Calculus Practice-8'",
+    "sku": "KAB-MAT-008",
+    "category_id": "bff8db23-749f-4bb2-a2ce-fb6d2c0f2bd6",
+    "price": 675.85,
+    "stock": 99,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715034410-0.9239008916774353.png"
+    ],
+    "description": "Advanced Pilot Calculus Practice-8 for comprehensive learning.",
+    "specs": {
+      "volume": "8",
+      "subject": "Mathematics"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 405.51
+  },
+  {
+    "id": "4c0b77ee-db9c-45b4-86d4-4bb0e3438fd0",
+    "name": "Rotring 'Gel Ink Fineliner 0.6mm'",
+    "sku": "KAB-PEN-003",
+    "category_id": "56e887c1-9f93-41c0-ba2a-f158c7a7694e",
+    "price": 190.75,
+    "stock": 99,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658388659-0.257238029081562.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658388660-0.29554653963211464.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658388660-0.9253108152432648.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658388660-0.17234010021286184.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658388660-0.4933355749642575.png"
+    ],
+    "description": "Smooth writing Rotring 0.6mm Fineliner, perfect for sketching.",
+    "specs": {
+      "tip_size": "0.6mm",
+      "ink_color": "Black"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good",
+      "Mechanical"
+    ],
+    "cost": 114.45
+  },
+  {
+    "id": "7e25dae5-2891-4bb5-8818-62b2234f5131",
+    "name": "Faber-Castell 'Graphite Pro 2H'",
+    "sku": "KAB-PNC-002",
+    "category_id": "871242c9-2620-4548-af3d-71b1956fe7cb",
+    "price": 228.55,
+    "stock": 98,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641078509-0.7535932574054676.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641078514-0.9011176486162226.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641078515-0.6411393515919613.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641078515-0.4074082732598706.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641078515-0.2203289923685805.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641078515-0.6985882058314494.png"
+    ],
+    "description": "Standard hard-lead Faber-Castell Graphite Pro 2H for technical sketches.",
+    "specs": {
+      "body": "Wooden",
+      "lead": "2H",
+      "finish": "SV Bonded Lead"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money"
+    ],
+    "cost": 137.13
+  },
+  {
+    "id": "ee527e54-c7cc-4739-a8ec-419fe43687ac",
+    "name": "Tombow 'Precision Ruler 30cm'",
+    "sku": "KAB-VAR-003",
+    "category_id": "68c7ea8a-5dcd-4e19-8009-c92b7f99d706",
+    "price": 363.65,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711645990-0.794245157042624.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711645990-0.6853812106562678.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711645990-0.9780073597103752.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711645990-0.389350765026244.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711645990-0.7775789921312587.png"
+    ],
+    "description": "Standard 30cm Tombow Precision Ruler, essential for school.",
+    "specs": {
+      "length": "30cm",
+      "material": "Flexible Plastic"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical"
+    ],
+    "cost": 218.19
+  },
+  {
+    "id": "17589470-5a5a-4a6d-b589-c65a6a0cf048",
+    "name": "Zebra 'World History Outline Pt.1'",
+    "sku": "KAB-SOC-001",
+    "category_id": "ccc8718c-84b6-4370-af0a-83c0e040fd3d",
+    "price": 565.95,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715621377-0.00994732271009624.png"
+    ],
+    "description": "The foundational Zebra World History Outline Pt.1, essential for students.",
+    "specs": {
+      "subject": "Foundations of History",
+      "series_part": "1"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 339.57
+  },
+  {
+    "id": "bfe9686c-d41d-4753-8cda-d330fdc1a929",
+    "name": "Zebra 'Tape Runner Pro V10'",
+    "sku": "KAB-COR-0010",
+    "category_id": "b47c0db2-f1f5-4f82-925b-c29bb3a0fabb",
+    "price": 123.2,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657918190-0.19791891525161942.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657918190-0.6688460855044278.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657918190-0.8044883411284917.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657918190-0.5313618903483852.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657918190-0.6019475608095509.png"
+    ],
+    "description": "High-capacity Zebra Tape Runner Pro V10 for industrial sticking needs.",
+    "specs": {
+      "type": "Permanent Adhesive",
+      "model": "V10"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good",
+      "Creative",
+      "Popular"
+    ],
+    "cost": 73.92
+  },
+  {
+    "id": "fd7bbf40-c400-4c02-81e9-103e48b8dea9",
+    "name": "Pentel 'A4 Grid Journal'",
+    "sku": "KAB-NOT-009",
+    "category_id": "4de8cc8c-466b-46fb-b99e-66fd6fee3245",
+    "price": 455.35,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713570869-0.05989996384668195.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713570869-0.27177373554167994.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713570869-0.05575271321873809.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713570869-0.3877380310724988.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713570869-0.5821588933668668.png"
+    ],
+    "description": "Archival quality Pentel A4 Grid Journal for long-term project planning.",
+    "specs": {
+      "size": "A4",
+      "style": "Grid"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "For Journey"
+    ],
+    "cost": 273.21
+  },
+  {
+    "id": "0e549e48-424a-4bb6-9258-86e08128b0ab",
+    "name": "Rotring 'Dust-Free Block Mini-5'",
+    "sku": "KAB-ERA-005",
+    "category_id": "240d9425-f2e3-479a-bfe9-700bea7abf8d",
+    "price": 61.95,
+    "stock": 97,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647623507-0.9667809238218079.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647623511-0.9607857171959836.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647623511-0.4023299997643426.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647623511-0.7274224091441504.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647623511-0.5501420839920115.png"
+    ],
+    "description": "Professional Rotring Dust-Free Mini-5, designed for precision correction.",
+    "specs": {
+      "type": "Technical Eraser",
+      "color": "White"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good",
+      "Mechanical"
+    ],
+    "cost": 37.17
+  },
+  {
+    "id": "05ebd93a-f0db-45a0-82d9-2dcb878b820f",
+    "name": "Uni 'World History Outline Pt.4'",
+    "sku": "KAB-SOC-004",
+    "category_id": "ccc8718c-84b6-4370-af0a-83c0e040fd3d",
+    "price": 507.5,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715649130-0.5981191097104404.png"
+    ],
+    "description": "Comprehensive Uni World History Outline Pt.4 for advanced educational study.",
+    "specs": {
+      "format": "Paperback",
+      "subject": "History",
+      "language": "English"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 304.5
+  },
+  {
+    "id": "01e738ec-499b-4eb2-a54f-d22c6a6e352d",
+    "name": "Pentel 'Dust-Free Block Mini-9'",
+    "sku": "KAB-ERA-009",
+    "category_id": "240d9425-f2e3-479a-bfe9-700bea7abf8d",
+    "price": 62.65,
+    "stock": 97,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647672861-0.027836644284627066.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647672863-0.09603920030216062.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647672863-0.3771399925910077.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647672863-0.3101834019573818.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647672863-0.8153620799446504.png"
+    ],
+    "description": "Premium quality Pentel Dust-Free Block Mini-9 designed for daily use and clean erasing.",
+    "specs": {
+      "type": "Eraser",
+      "material": "High Quality Polymer"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good"
+    ],
+    "cost": 37.59
+  },
+  {
+    "id": "0276a1c3-d4dd-49aa-8413-070f5358e9fb",
+    "name": "Uni 'Dust-Free Block Mini-7'",
+    "sku": "KAB-ERA-007",
+    "category_id": "240d9425-f2e3-479a-bfe9-700bea7abf8d",
+    "price": 197.75,
+    "stock": 98,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647691742-0.8725197771460503.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647691743-0.21617342171743392.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647691743-0.40429580934475784.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647691743-0.33236422253526265.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647691743-0.49959749981693136.png"
+    ],
+    "description": "Premium quality Uni Dust-Free Block Mini-7 designed for professional drafting and daily use.",
+    "specs": {
+      "type": "Eraser",
+      "material": "Dust-Free Composite"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good"
+    ],
+    "cost": 118.65
+  },
+  {
+    "id": "cbeefbef-e6aa-4fb0-8845-02692515e3be",
+    "name": "Uni 'Tape Runner Pro V2'",
+    "sku": "KAB-COR-002",
+    "category_id": "dd78ae84-efb4-4b7f-8e14-9f1f1c4aef27",
+    "price": 243.25,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657973155-0.6835014900876686.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657973155-0.0699167341873177.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657973155-0.9217947753734616.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657973155-0.2556759829726437.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657973155-0.270190007675452.png"
+    ],
+    "description": "Standard Uni Tape Runner Pro V2 for reliable office use.",
+    "specs": {
+      "type": "Permanent Adhesive",
+      "width": "4mm"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Creative"
+    ],
+    "cost": 145.95
+  },
+  {
+    "id": "25f25d5b-a5e3-4b59-a286-fa1b252ffb94",
+    "name": "Faber-Castell 'Precision Ruler 90cm'",
+    "sku": "KAB-VAR-009",
+    "category_id": "68c7ea8a-5dcd-4e19-8009-c92b7f99d706",
+    "price": 315,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711393432-0.8895627711282269.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711393432-0.504114916259841.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711393432-0.4056165467351549.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711393432-0.9870789191487617.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711393432-0.29529038572631394.png"
+    ],
+    "description": "Long-reach Faber-Castell 90cm Precision Ruler for large scale designs.",
+    "specs": {
+      "length": "90cm",
+      "material": "Anodized Aluminum"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical"
+    ],
+    "cost": 189
+  },
+  {
+    "id": "9289e03c-dbfc-4555-88bc-658bf1107641",
+    "name": "Tombow 'World History Outline Pt.3'",
+    "sku": "KAB-SOC-003",
+    "category_id": "ccc8718c-84b6-4370-af0a-83c0e040fd3d",
+    "price": 554.75,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715689209-0.6884161779046731.png"
+    ],
+    "description": "Tombow World History Outline Pt.3, covering the pivotal Renaissance era.",
+    "specs": {
+      "subject": "Renaissance",
+      "series_part": "3"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 332.85
+  },
+  {
+    "id": "72421686-596a-497c-9dd6-862b56c96435",
+    "name": "Montblanc ",
+    "sku": "KAB-SOC-011",
+    "category_id": "b47c0db2-f1f5-4f82-925b-c29bb3a0fabb",
+    "price": 350,
+    "stock": 1,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715748527-0.5959454417913497.png"
+    ],
+    "description": "The ultimate Montblanc Premium Luxury Pen for a world-class writing experience.",
+    "specs": {
+      "nib": "18K Gold",
+      "type": "Fountain Pen",
+      "casing": "Resin"
+    },
+    "created_at": "2026-03-06T18:02:12.446468+00:00",
+    "tags": [
+      "Luxury",
+      "Premium"
+    ],
+    "cost": 210
+  },
+  {
+    "id": "53170eb3-475a-4562-b0bf-dffc9416e5aa",
+    "name": "Muji 'Tape Runner Pro V5'",
+    "sku": "KAB-COR-005",
+    "category_id": "dd78ae84-efb4-4b7f-8e14-9f1f1c4aef27",
+    "price": 257.95,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657845971-0.35992648263622173.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657845971-0.7520383177199401.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657845971-0.24214126417657678.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657845971-0.1666394298813434.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657845971-0.4997580725534081.png"
+    ],
+    "description": "Muji Tape Runner Pro V5, clean and efficient minimalist adhesive.",
+    "specs": {
+      "design": "Compact",
+      "adhesive": "Permanent"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Minimal",
+      "Creative"
+    ],
+    "cost": 154.77
+  },
+  {
+    "id": "28173a65-4181-4f9a-af44-4c847e98a98a",
+    "name": "Moleskine 'Dust-Free Block Mini-8'",
+    "sku": "KAB-ERA-008",
+    "category_id": "240d9425-f2e3-479a-bfe9-700bea7abf8d",
+    "price": 161.7,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647729612-0.9061695648801763.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647729612-0.3680258960348909.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647729612-0.4887994495403202.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647729612-0.6317965406081247.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647729612-0.2115925196260805.png"
+    ],
+    "description": "Premium Moleskine Dust-Free Mini-8 eraser, matching the quality of Moleskine notebooks.",
+    "specs": {
+      "type": "Stationery Accessory",
+      "brand_tier": "Premium"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good"
+    ],
+    "cost": 97.02
+  },
+  {
+    "id": "438ab1d6-5fd3-4a65-bdb0-21a4cf29646a",
+    "name": "Muji 'Dust-Free Block Mini-6'",
+    "sku": "KAB-ERA-006",
+    "category_id": "240d9425-f2e3-479a-bfe9-700bea7abf8d",
+    "price": 164.85,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647776118-0.12439456553550154.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647776118-0.4288036745364644.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647776118-0.34149253112468236.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647776118-0.7919668700034252.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647776119-0.04673641587592803.png"
+    ],
+    "description": "Muji Minimalist Dust-Free Mini-6 eraser, functional and simple.",
+    "specs": {
+      "design": "Minimal",
+      "material": "Recyclable"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good",
+      "Minimal"
+    ],
+    "cost": 98.91
+  },
+  {
+    "id": "4015c79f-948d-40e8-b160-e6faede95864",
+    "name": "Pentel 'Field Notes A6 Vol.10'",
+    "sku": "KAB-POC-0010",
+    "category_id": "9cedad56-4485-4f1a-bfe8-f4746614a55f",
+    "price": 382.2,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714275053-0.8130240637906258.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714275053-0.5869077126340738.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714275053-0.29124182232697393.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714275053-0.8618873244509097.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714275053-0.4893128782022287.png"
+    ],
+    "description": "Durable Pentel Field Notes A6 Vol.10, the ultimate pocket companion.",
+    "specs": {
+      "type": "Pocket Notebook",
+      "cover": "Kraft",
+      "pages": "48"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money"
+    ],
+    "cost": 229.32
+  },
+  {
+    "id": "407ef8e3-db48-4f16-94be-edaee66a83bc",
+    "name": "Uni 'Ancient Civilizations Vol.9'",
+    "sku": "KAB-HIS-009",
+    "category_id": "cfe3bc32-e4fe-429f-9b7d-89d3fc33209e",
+    "price": 623.7,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714882982-0.05260715342047817.png"
+    ],
+    "description": "Uni Ancient Civilizations Vol.9, uncovering secrets of the past.",
+    "specs": {
+      "pages": "320",
+      "subject": "Archeology"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 374.22
+  },
+  {
+    "id": "48473ba3-691b-4eb7-8043-b3bce44694d1",
+    "name": "Muji 'Ancient Civilizations Vol.6'",
+    "sku": "KAB-HIS-006",
+    "category_id": "cfe3bc32-e4fe-429f-9b7d-89d3fc33209e",
+    "price": 677.95,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714894921-0.9535624491784861.png"
+    ],
+    "description": "Muji Ancient Civilizations Vol.6, elegant design meet historical facts.",
+    "specs": {
+      "design": "Minimalist",
+      "volume": "6"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Minimal",
+      "Education"
+    ],
+    "cost": 406.77
+  },
+  {
+    "id": "4b1c7afc-78c5-442d-a7c3-7b76722d6fee",
+    "name": "Faber-Castell 'Ancient Civilizations Vol.4'",
+    "sku": "KAB-HIS-004",
+    "category_id": "cfe3bc32-e4fe-429f-9b7d-89d3fc33209e",
+    "price": 572.95,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714908263-0.899712324407056.png"
+    ],
+    "description": "Exquisite Faber-Castell Ancient Civilizations Vol.4 reference book.",
+    "specs": {
+      "format": "Hardcover",
+      "subject": "Asian Civilizations"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 343.77
+  },
+  {
+    "id": "4f185285-e580-45fe-9768-6aa5274cbca9",
+    "name": "Pilot 'Advanced Calculus Practice-6'",
+    "sku": "KAB-MAT-006",
+    "category_id": "bff8db23-749f-4bb2-a2ce-fb6d2c0f2bd6",
+    "price": 710.85,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715046228-0.12622911512012214.png"
+    ],
+    "description": "Pilot Advanced Calculus Practice-6 workbook for rigorous math training.",
+    "specs": {
+      "level": "Advanced",
+      "subject": "Mathematics"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 426.51
+  },
+  {
+    "id": "4420ab10-80d1-41b8-87bd-73453356866f",
+    "name": "Tombow 'Physics Lab Manual V5'",
+    "sku": "KAB-SCI-005",
+    "category_id": "30e981a5-892f-4347-b012-30853368be54",
+    "price": 733.25,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715225399-0.44705209379371413.png"
+    ],
+    "description": "Essential Tombow Physics Lab Manual V5 for experimental science study.",
+    "specs": {
+      "content": "Laboratory Experiments",
+      "subject": "Physics"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 439.95
+  },
+  {
+    "id": "50aed2a3-5f0f-47fc-9ad0-88f556317d7d",
+    "name": "Pilot 'Advanced Calculus Practice-9'",
+    "sku": "KAB-MAT-009",
+    "category_id": "bff8db23-749f-4bb2-a2ce-fb6d2c0f2bd6",
+    "price": 676.55,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715058391-0.49294855560982787.png"
+    ],
+    "description": "Rigorous Pilot Advanced Calculus Practice-9 for higher-level scholars.",
+    "specs": {
+      "part": "9",
+      "subject": "Advanced Mathematics"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 405.93
+  },
+  {
+    "id": "4f68ebae-896d-4dbd-9dfb-00fc15f6bc75",
+    "name": "Uni 'Physics Lab Manual V6'",
+    "sku": "KAB-SCI-006",
+    "category_id": "30e981a5-892f-4347-b012-30853368be54",
+    "price": 571.55,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715237143-0.7813459388217089.png"
+    ],
+    "description": "Uni Physics Lab Manual V6, focusing on optical experiments.",
+    "specs": {
+      "subject": "Physics",
+      "experiments": "Optics & Light"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 342.93
+  },
+  {
+    "id": "24c758d2-531a-4704-9421-b50a05884f00",
+    "name": "Pentel 'World History Outline Pt.8'",
+    "sku": "KAB-SOC-008",
+    "category_id": "ccc8718c-84b6-4370-af0a-83c0e040fd3d",
+    "price": 644,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715662277-0.5697533109318731.png"
+    ],
+    "description": "Pentel World History Outline Pt.8, exploring modern era transformations.",
+    "specs": {
+      "subject": "Modern History",
+      "series_part": "8"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 386.4
+  },
+  {
+    "id": "7bd87337-a759-4e15-8e37-113fc0bd5ebd",
+    "name": "Rotring 'Gel Ink Fineliner 0.7mm'",
+    "sku": "KAB-PEN-009",
+    "category_id": "56e887c1-9f93-41c0-ba2a-f158c7a7694e",
+    "price": 232.4,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658442382-0.895652980063387.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658442383-0.1907889311872687.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658442383-0.1402148938962986.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658442383-0.27913560876885024.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658442383-0.8198045279395579.png"
+    ],
+    "description": "Bold Rotring 0.7mm Gel Fineliner for high-visibility notes.",
+    "specs": {
+      "ink": "Vibrant Gel",
+      "tip": "0.7mm",
+      "design": "Ergonomic Body"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical"
+    ],
+    "cost": 139.44
+  },
+  {
+    "id": "4d78010f-fdfc-4a4a-8b72-e65f63fd3e4d",
+    "name": "Pentel 'Graphite Pro 10H'",
+    "sku": "KAB-PNC-0010",
+    "category_id": "871242c9-2620-4548-af3d-71b1956fe7cb",
+    "price": 238.35,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641910659-0.4072763209695126.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641910660-0.14823931980906957.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641910660-0.2635931326786016.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641910660-0.19511758749202024.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641910660-0.6722416051756226.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641910660-0.04485030043312843.png"
+    ],
+    "description": "The ultimate hard lead Pentel Graphite Pro 10H for specialized marking.",
+    "specs": {
+      "lead": "10H",
+      "body_material": "Cedar Wood"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money"
+    ],
+    "cost": 143.01
+  },
+  {
+    "id": "776c463c-6e7f-47fe-b3fc-65714ddecb27",
+    "name": "Zebra 'Precision Ruler 70cm'",
+    "sku": "KAB-VAR-007",
+    "category_id": "68c7ea8a-5dcd-4e19-8009-c92b7f99d706",
+    "price": 301,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711430306-0.2274842942735006.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711430306-0.12901671188117003.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711430306-0.5321697152405592.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711430306-0.2617523801652032.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711430306-0.904760815742441.png"
+    ],
+    "description": "Stable Zebra 70cm Precision Ruler with non-slip features for large tables.",
+    "specs": {
+      "length": "70cm",
+      "feature": "Anti-slip Backing"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical"
+    ],
+    "cost": 180.6
+  },
+  {
+    "id": "6bb0cc4c-9f6d-498c-981f-97962efaef3a",
+    "name": "Muji 'Ancient Civilizations Vol.2'",
+    "sku": "KAB-HIS-002",
+    "category_id": "cfe3bc32-e4fe-429f-9b7d-89d3fc33209e",
+    "price": 600.25,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714922327-0.30277601844116997.png"
+    ],
+    "description": "Muji Ancient Civilizations Vol.2, focused on classical Roman history.",
+    "specs": {
+      "design": "Minimal",
+      "subject": "Roman Empire"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Minimal",
+      "Education"
+    ],
+    "cost": 360.15
+  },
+  {
+    "id": "7a2e2829-439b-4fd7-8830-1a049d17b85f",
+    "name": "Rotring 'Ancient Civilizations Vol.8'",
+    "sku": "KAB-HIS-008",
+    "category_id": "cfe3bc32-e4fe-429f-9b7d-89d3fc33209e",
+    "price": 582.4,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714947317-0.10148951681880336.png"
+    ],
+    "description": "In-depth Rotring Ancient Civilizations Vol.8 manual.",
+    "specs": {
+      "format": "Educational Manual",
+      "subject": "Ancient Greece"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education",
+      "Mechanical"
+    ],
+    "cost": 349.44
+  },
+  {
+    "id": "697391ff-b926-4431-92a2-d9ed33898e0c",
+    "name": "Tombow 'Advanced Calculus Practice-10'",
+    "sku": "KAB-MAT-0010",
+    "category_id": "bff8db23-749f-4bb2-a2ce-fb6d2c0f2bd6",
+    "price": 634.2,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715079307-0.9601648337781555.png"
+    ],
+    "description": "Tombow Advanced Calculus Practice-10, for the final stage of math mastery.",
+    "specs": {
+      "volume": "10",
+      "subject": "Advanced Math"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 380.52
+  },
+  {
+    "id": "6e0dbe08-876c-4033-9bbc-594cc3e3c31e",
+    "name": "Muji 'Advanced Calculus Practice-2'",
+    "sku": "KAB-MAT-002",
+    "category_id": "bff8db23-749f-4bb2-a2ce-fb6d2c0f2bd6",
+    "price": 722.05,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715120433-0.4410393211087693.png"
+    ],
+    "description": "Muji Advanced Calculus Practice-2, simple design for complex problem solving.",
+    "specs": {
+      "style": "Minimal",
+      "subject": "Calculus"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Minimal",
+      "Education"
+    ],
+    "cost": 433.23
+  },
+  {
+    "id": "6b597fde-94d4-4a2d-90fe-a24f8097b65c",
+    "name": "Moleskine 'Physics Lab Manual V1'",
+    "sku": "KAB-SCI-001",
+    "category_id": "30e981a5-892f-4347-b012-30853368be54",
+    "price": 730.1,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715285099-0.38768649112685494.png"
+    ],
+    "description": "Moleskine Physics Lab Manual V1, combining education with premium design.",
+    "specs": {
+      "style": "Premium Educational",
+      "subject": "General Physics"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 438.06
+  },
+  {
+    "id": "7b62c117-44af-4093-a1a2-da87b48551c7",
+    "name": "Pilot 'Physics Lab Manual V7'",
+    "sku": "KAB-SCI-007",
+    "category_id": "30e981a5-892f-4347-b012-30853368be54",
+    "price": 600.95,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715309238-0.9699167686584899.png"
+    ],
+    "description": "Pilot Physics Lab Manual V7, exploring electromagnetic principles.",
+    "specs": {
+      "topics": "Electricity & Magnetism",
+      "subject": "Physics"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 360.57
+  },
+  {
+    "id": "68e82b52-3fca-498b-84c3-e10094045ffe",
+    "name": "Zebra 'World History Outline Pt.9'",
+    "sku": "KAB-SOC-009",
+    "category_id": "ccc8718c-84b6-4370-af0a-83c0e040fd3d",
+    "price": 529.55,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715675812-0.5509194640544415.png"
+    ],
+    "description": "Zebra World History Outline Pt.9, exploring late 20th century history.",
+    "specs": {
+      "part": "9",
+      "subject": "Contemporary History"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 317.73
+  },
+  {
+    "id": "a1e76bc1-3e8b-442a-bbe7-1b9aba030b7d",
+    "name": "Tombow 'Tape Runner Pro V7'",
+    "sku": "KAB-COR-007",
+    "category_id": "dd78ae84-efb4-4b7f-8e14-9f1f1c4aef27",
+    "price": 212.1,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657862732-0.48209151910293324.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657862733-0.10846315330527656.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657862733-0.13362842780177475.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657862733-0.10628260100951181.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657862733-0.08387912691746924.png"
+    ],
+    "description": "Professional Tombow Tape Runner Pro V7 for quick and clean bonding.",
+    "specs": {
+      "type": "Adhesive Runner",
+      "tape_len": "12m"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Creative"
+    ],
+    "cost": 127.26
+  },
+  {
+    "id": "c03e2acc-5e52-4fdb-a0bc-139ea1d5d553",
+    "name": "Uni 'Tape Runner Pro V4'",
+    "sku": "KAB-COR-004",
+    "category_id": "dd78ae84-efb4-4b7f-8e14-9f1f1c4aef27",
+    "price": 269.15,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657936142-0.6129904337524379.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657936142-0.7497859955179421.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657936142-0.6428950421107948.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657936142-0.6917869059728567.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657936142-0.9548889361037866.png"
+    ],
+    "description": "Long-lasting Uni Tape Runner Pro V4 for serious adhesive work.",
+    "specs": {
+      "len": "15m",
+      "width": "6mm"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Creative"
+    ],
+    "cost": 161.49
+  },
+  {
+    "id": "89abd82f-9f42-4a20-96c8-5651ffaf1f4b",
+    "name": "Tombow 'A5 Grid Journal'",
+    "sku": "KAB-NOT-001",
+    "category_id": "4de8cc8c-466b-46fb-b99e-66fd6fee3245",
+    "price": 475.65,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713466161-0.48233917972743634.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713466161-0.2936892426697114.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713466161-0.40355140686996316.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713466161-0.6681496123566351.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713466161-0.36035658024189365.png"
+    ],
+    "description": "High-quality Tombow A5 Grid Journal for balanced daily writing.",
+    "specs": {
+      "size": "A5",
+      "style": "Grid",
+      "paper_weight": "90gsm"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "For Journey"
+    ],
+    "cost": 285.39
+  },
+  {
+    "id": "8981e744-f64e-4008-bb48-17437f607f4f",
+    "name": "Tombow 'Ancient Civilizations Vol.10'",
+    "sku": "KAB-HIS-0010",
+    "category_id": "cfe3bc32-e4fe-429f-9b7d-89d3fc33209e",
+    "price": 576.8,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714961194-0.4548983494048935.png"
+    ],
+    "description": "Exquisite Tombow Ancient Civilizations Vol.10, Mesoamerican focus.",
+    "specs": {
+      "format": "Collector Edition",
+      "subject": "Maya & Aztec"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 346.08
+  },
+  {
+    "id": "c1997dea-b22d-4c76-a7e0-a4208dbcf5e5",
+    "name": "Pilot 'Field Notes A6 Vol.2'",
+    "sku": "KAB-POC-002",
+    "category_id": "9cedad56-4485-4f1a-bfe8-f4746614a55f",
+    "price": 359.45,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714334305-0.5056480668968195.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714334306-0.44838857187878745.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714334306-0.45093232490231583.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714334306-0.21943147828651244.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714334306-0.25464910476075286.png"
+    ],
+    "description": "Blank Pilot Field Notes A6 Vol.2, perfect for sketches and doodles.",
+    "specs": {
+      "vol": "2",
+      "format": "A6",
+      "layout": "Blank Pages"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money"
+    ],
+    "cost": 215.67
+  },
+  {
+    "id": "a5177f1a-5b2c-42ca-9284-d04ef6622afb",
+    "name": "Uni 'Ancient Civilizations Vol.7'",
+    "sku": "KAB-HIS-007",
+    "category_id": "cfe3bc32-e4fe-429f-9b7d-89d3fc33209e",
+    "price": 688.8,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714977855-0.6977312080170981.png"
+    ],
+    "description": "Uni Ancient Civilizations Vol.7, exploring the wonders of the Nile.",
+    "specs": {
+      "volume": "7",
+      "subject": "Egyptian Dynasties"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 413.28
+  },
+  {
+    "id": "a80decd3-286b-4116-95e6-97a3a35746ec",
+    "name": "Pilot 'Advanced Calculus Practice-7'",
+    "sku": "KAB-MAT-007",
+    "category_id": "bff8db23-749f-4bb2-a2ce-fb6d2c0f2bd6",
+    "price": 642.25,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715153028-0.6018099951013636.png"
+    ],
+    "description": "Pilot Advanced Calculus Practice-7 for expert-level training.",
+    "specs": {
+      "level": "Expert",
+      "subject": "Math"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 385.35
+  },
+  {
+    "id": "c081ecac-7bfa-454e-841d-2b383ad5c968",
+    "name": "Faber-Castell 'Advanced Calculus Practice-4'",
+    "sku": "KAB-MAT-004",
+    "category_id": "bff8db23-749f-4bb2-a2ce-fb6d2c0f2bd6",
+    "price": 709.1,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715165759-0.5564712333471782.png"
+    ],
+    "description": "Faber-Castell Calculus Practice-4 for academic skill building.",
+    "specs": {
+      "part": "4",
+      "subject": "Mathematics"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 425.46
+  },
+  {
+    "id": "a8f01aa3-d687-4105-b945-005a328e3492",
+    "name": "Faber-Castell 'Physics Lab Manual V8'",
+    "sku": "KAB-SCI-008",
+    "category_id": "30e981a5-892f-4347-b012-30853368be54",
+    "price": 660.1,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715324889-0.19241683379523622.png"
+    ],
+    "description": "Academic Faber-Castell Physics Lab Manual V8 for modern astrophysics.",
+    "specs": {
+      "edition": "V8",
+      "subject": "Astrophysics"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education",
+      "New"
+    ],
+    "cost": 396.06
+  },
+  {
+    "id": "9e5ce3d0-cc74-492e-b160-feb23fe9c3bc",
+    "name": "Faber-Castell 'World History Outline Pt.6'",
+    "sku": "KAB-SOC-006",
+    "category_id": "ccc8718c-84b6-4370-af0a-83c0e040fd3d",
+    "price": 658,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715706288-0.45346836030600723.png"
+    ],
+    "description": "In-depth Faber-Castell World History Outline Pt.6 for historians.",
+    "specs": {
+      "part": "6",
+      "subject": "Global Conflict"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 394.8
+  },
+  {
+    "id": "c70b571a-ae87-4570-b316-df525ad99ec3",
+    "name": "Zebra 'Graphite Pro 7H'",
+    "sku": "KAB-PNC-007",
+    "category_id": "871242c9-2620-4548-af3d-71b1956fe7cb",
+    "price": 112.35,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641962166-0.047408987965567806.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641962167-0.34684504283628736.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641962167-0.21489129687675224.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641962167-0.5839600967050255.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641962167-0.23674811370467486.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641962167-0.6260222164748109.png"
+    ],
+    "description": "Consistently hard Zebra Graphite Pro 7H pencil for technical use.",
+    "specs": {
+      "body": "Standard Hex",
+      "lead": "7H"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good"
+    ],
+    "cost": 67.41
+  },
+  {
+    "id": "ef0df374-c7c6-435b-a4e2-2860969197a6",
+    "name": "Uni 'Graphite Pro 8H'",
+    "sku": "KAB-PNC-008",
+    "category_id": "871242c9-2620-4548-af3d-71b1956fe7cb",
+    "price": 112.35,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641983265-0.8554197287710952.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641983266-0.5683258954742745.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641983266-0.653434984920139.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641983266-0.8298400355765309.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641983266-0.011129295309413312.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641983266-0.41550764999150036.png"
+    ],
+    "description": "Reliable Uni Graphite Pro 8H hard pencil for precision work.",
+    "specs": {
+      "lead": "8H",
+      "type": "Drafting Pencil"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good"
+    ],
+    "cost": 67.41
+  },
+  {
+    "id": "c1a83262-8fc6-4697-8eaf-951186d6d897",
+    "name": "Muji 'Tape Runner Pro V8'",
+    "sku": "KAB-COR-008",
+    "category_id": "dd78ae84-efb4-4b7f-8e14-9f1f1c4aef27",
+    "price": 257.95,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657954312-0.6609051981981251.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657954312-0.8415380616982301.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657954312-0.08832621976011623.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657954312-0.034475257441918594.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657954312-0.9080822441124294.png"
+    ],
+    "description": "Large format Muji Tape Runner Pro V8 minimalist adhesive.",
+    "specs": {
+      "type": "Adhesive",
+      "style": "Minimal"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Minimal",
+      "Creative"
+    ],
+    "cost": 154.77
+  },
+  {
+    "id": "ea797832-b96b-4d51-941c-eca8cb2f1de8",
+    "name": "Zebra 'Gel Ink Fineliner 0.3mm'",
+    "sku": "KAB-PEN-005",
+    "category_id": "56e887c1-9f93-41c0-ba2a-f158c7a7694e",
+    "price": 229.95,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658520610-0.38205511905251.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658520610-0.935460618461233.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658520610-0.14235143792985117.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658520610-0.2869801300159788.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658520610-0.6353140461170981.png"
+    ],
+    "description": "Micro-pigment Zebra 0.3mm Gel Fineliner for technical detail.",
+    "specs": {
+      "ink": "Micro-Pigment",
+      "tip": "0.3mm",
+      "color": "Black"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money"
+    ],
+    "cost": 137.97
+  },
+  {
+    "id": "c74bcc23-08f0-44d2-99ad-93127112b77f",
+    "name": "Faber-Castell 'Field Notes A6 Vol.3'",
+    "sku": "KAB-POC-003",
+    "category_id": "9cedad56-4485-4f1a-bfe8-f4746614a55f",
+    "price": 391.3,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714375322-0.4055952729317138.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714375322-0.20283241641163618.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714375322-0.07128231309998989.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714375322-0.696954706871136.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714375322-0.6595627028494212.png"
+    ],
+    "description": "Squared Faber-Castell Field Notes A6 Vol.3 for technical field notes.",
+    "specs": {
+      "vol": "3",
+      "size": "A6",
+      "layout": "Squared"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "New"
+    ],
+    "cost": 234.78
+  },
+  {
+    "id": "cf044161-12f5-432e-bd01-f11149246077",
+    "name": "Faber-Castell 'Field Notes A6 Vol.7'",
+    "sku": "KAB-POC-007",
+    "category_id": "9cedad56-4485-4f1a-bfe8-f4746614a55f",
+    "price": 369.95,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714408568-0.2648734882906505.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714408569-0.7102803698537933.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714408569-0.8522061296466161.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714408569-0.7054645490206473.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714408569-0.49653355139415756.png"
+    ],
+    "description": "Graph paper Faber-Castell Field Notes A6 Vol.7 for technical sketching.",
+    "specs": {
+      "vol": "7",
+      "format": "A6",
+      "layout": "Graph"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money"
+    ],
+    "cost": 221.97
+  },
+  {
+    "id": "e4c0c27e-3605-4ba0-bddb-d9b0ccb05872",
+    "name": "Zebra 'Ancient Civilizations Vol.5'",
+    "sku": "KAB-HIS-005",
+    "category_id": "cfe3bc32-e4fe-429f-9b7d-89d3fc33209e",
+    "price": 540.75,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714994168-0.47281673311926864.png"
+    ],
+    "description": "Educational Zebra Ancient Civilizations Vol.5, historical focus.",
+    "specs": {
+      "volume": "5",
+      "subject": "Ancient Americas"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education",
+      "New"
+    ],
+    "cost": 324.45
+  },
+  {
+    "id": "ec91bbac-1233-4230-94db-cfc8a2b5ba65",
+    "name": "Pilot 'Ancient Civilizations Vol.3'",
+    "sku": "KAB-HIS-003",
+    "category_id": "cfe3bc32-e4fe-429f-9b7d-89d3fc33209e",
+    "price": 536.55,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715017065-0.23753624758827063.png"
+    ],
+    "description": "Educational Pilot Ancient Civilizations Vol.3 workbook.",
+    "specs": {
+      "volume": "3",
+      "subject": "Ancient China"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 321.93
+  },
+  {
+    "id": "9c0a4508-1cde-4cb2-8b32-1691623e14ff",
+    "name": "Lamy 'Advanced Calculus Practice-3'",
+    "sku": "KAB-MAT-003",
+    "category_id": "bff8db23-749f-4bb2-a2ce-fb6d2c0f2bd6",
+    "price": 632.45,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715136502-0.083642663174476.png"
+    ],
+    "description": "Lamy Advanced Calculus Practice-3, premium educational workbook.",
+    "specs": {
+      "brand": "Lamy Professional",
+      "subject": "Calculus"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 379.47
+  },
+  {
+    "id": "edf7dc99-7f68-4b2b-ac80-eb2c6792809b",
+    "name": "Muji 'Advanced Calculus Practice-1'",
+    "sku": "KAB-MAT-001",
+    "category_id": "bff8db23-749f-4bb2-a2ce-fb6d2c0f2bd6",
+    "price": 632.1,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715178301-0.7571294593809264.png"
+    ],
+    "description": "Muji Advanced Calculus Practice-1, basic calculus with minimalist design.",
+    "specs": {
+      "style": "Minimal",
+      "subject": "Calculus Foundations"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Minimal",
+      "Education"
+    ],
+    "cost": 379.26
+  },
+  {
+    "id": "d7918055-de0a-4ef9-a44f-e7c35e06f498",
+    "name": "Pilot 'Graphite Pro 4H'",
+    "sku": "KAB-PNC-004",
+    "category_id": "871242c9-2620-4548-af3d-71b1956fe7cb",
+    "price": 73.85,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774642006611-0.13103231507907964.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774642006611-0.26741652879189337.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774642006611-0.9512258248504663.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774642006611-0.16909128557912878.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774642006612-0.1123765981709145.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774642006612-0.7255073754353762.png"
+    ],
+    "description": "Dependable Pilot Graphite Pro 4H for sharp, light lines.",
+    "specs": {
+      "lead": "4H",
+      "type": "Mechanical Pencil Refill Compatible"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good"
+    ],
+    "cost": 44.31
+  },
+  {
+    "id": "e0961d6b-4c35-47d4-9bef-a6f71abb0a10",
+    "name": "Rotring 'Graphite Pro 1H'",
+    "sku": "KAB-PNC-001",
+    "category_id": "871242c9-2620-4548-af3d-71b1956fe7cb",
+    "price": 172.2,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774642033853-0.42894616121049656.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774642033854-0.7648673132751148.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774642033854-0.271751411285288.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774642033854-0.2782979935934443.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774642033854-0.44914389293614576.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774642033854-0.39217390366128324.png"
+    ],
+    "description": "Rotring Graphite Pro 1H, a staple in any technical drawer case.",
+    "specs": {
+      "body": "Technical Black Body",
+      "lead": "1H"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good",
+      "Mechanical"
+    ],
+    "cost": 103.32
+  },
+  {
+    "id": "2b7321a9-9c1d-4956-997a-410cb23ebc2c",
+    "name": "Zebra 'Dust-Free Block Mini-1'",
+    "sku": "KAB-ERA-001",
+    "category_id": "240d9425-f2e3-479a-bfe9-700bea7abf8d",
+    "price": 140,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647751025-0.9359998839495944.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647751025-0.9398028455397694.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647751025-0.8298186126226148.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647751025-0.8823828706294368.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647751025-0.7592678456812331.png"
+    ],
+    "description": "Zebra Dust-Free Mini-1, the standard for clean and effective erasing.",
+    "specs": {
+      "series": "Mini-1",
+      "feature": "Non-abrasive"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good"
+    ],
+    "cost": 84
+  },
+  {
+    "id": "6084e06c-cec1-4c65-8fec-61eb9daa13b7",
+    "name": "Pilot 'Dust-Free Block Mini-10'",
+    "sku": "KAB-ERA-0010",
+    "category_id": "240d9425-f2e3-479a-bfe9-700bea7abf8d",
+    "price": 219.45,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647803113-0.7320682545203082.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647803113-0.8414733596024312.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647803113-0.10935878753863204.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647803113-0.7241348415568692.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647803113-0.48264022033883636.png"
+    ],
+    "description": "High-efficiency Pilot Dust-Free Mini-10 for perfect corrections.",
+    "specs": {
+      "type": "Eraser",
+      "efficiency": "Extra High"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money"
+    ],
+    "cost": 131.67
+  },
+  {
+    "id": "7856c7cd-aef8-4df4-b817-31ee0c4a7603",
+    "name": "Faber-Castell 'Gel Ink Fineliner 0.3mm'",
+    "sku": "KAB-PEN-0010",
+    "category_id": "56e887c1-9f93-41c0-ba2a-f158c7a7694e",
+    "price": 155.75,
+    "stock": 99,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658355150-0.31978503712509887.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658355150-0.09875870567065215.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658355151-0.6216382941761581.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658355151-0.24778244301880192.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658355151-0.49137867824207404.png"
+    ],
+    "description": "Ultra-fine Faber-Castell 0.3mm Fineliner for surgical precision writing.",
+    "specs": {
+      "ink": "Waterproof",
+      "tip": "0.3mm",
+      "color": "Dark Blue"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good"
+    ],
+    "cost": 93.45
+  },
+  {
+    "id": "dde34445-e75c-4591-8982-97dbc067050b",
+    "name": "Uni 'Physics Lab Manual V3'",
+    "sku": "KAB-SCI-003",
+    "category_id": "30e981a5-892f-4347-b012-30853368be54",
+    "price": 577.85,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715356083-0.5825566247429755.png"
+    ],
+    "description": "Uni Physics Lab Manual V3, exploring fluid physics.",
+    "specs": {
+      "vol": "3",
+      "subject": "Fluid Dynamics"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 346.71
+  },
+  {
+    "id": "e40d241e-07de-43b3-885c-232d5d2ccffa",
+    "name": "Faber-Castell 'Advanced Calculus Practice-5'",
+    "sku": "KAB-MAT-005",
+    "category_id": "bff8db23-749f-4bb2-a2ce-fb6d2c0f2bd6",
+    "price": 656.95,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715201795-0.974593608697371.png"
+    ],
+    "description": "Academic Faber-Castell Advanced Calculus Practice-5 workbook.",
+    "specs": {
+      "part": "5",
+      "subject": "Math"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 394.17
+  },
+  {
+    "id": "e1cfc36b-8ce0-4e1f-91c3-620d45b120f5",
+    "name": "Pilot 'World History Outline Pt.7'",
+    "sku": "KAB-SOC-007",
+    "category_id": "ccc8718c-84b6-4370-af0a-83c0e040fd3d",
+    "price": 537.95,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715721485-0.2749222020125509.png"
+    ],
+    "description": "In-depth Pilot World History Outline Pt.7, academic focus.",
+    "specs": {
+      "part": "7",
+      "subject": "Industrial Revolution"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education"
+    ],
+    "cost": 322.77
+  },
+  {
+    "id": "524fe2dc-8faf-4f2d-a147-29453e134881",
+    "name": "Uni 'Physics Lab Manual V10'",
+    "sku": "KAB-SCI-0010",
+    "category_id": "30e981a5-892f-4347-b012-30853368be54",
+    "price": 645.4,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715247558-0.5930645827914908.png"
+    ],
+    "description": "The latest Uni Physics Lab Manual V10 covering quantum science.",
+    "specs": {
+      "edition": "V10",
+      "subject": "Quantum Physics"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education",
+      "New"
+    ],
+    "cost": 387.24
+  },
+  {
+    "id": "dcc3cb98-d58c-4f0c-b510-10450cbf1fc0",
+    "name": "Muji 'Tape Runner Pro V6'",
+    "sku": "KAB-COR-006",
+    "category_id": "dd78ae84-efb4-4b7f-8e14-9f1f1c4aef27",
+    "price": 127.75,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657989427-0.5280088775389634.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657989427-0.9942510478839263.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657989427-0.15151878420491738.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657989427-0.15229133596946498.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657989427-0.29326781776939514.png"
+    ],
+    "description": "Small format Muji Tape Runner Pro V6 minimalist adhesive.",
+    "specs": {
+      "type": "Adhesive",
+      "style": "Minimal"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good",
+      "Minimal",
+      "Creative"
+    ],
+    "cost": 76.65
+  },
+  {
+    "id": "c51171a0-aa2b-4161-abca-ae356b03f01b",
+    "name": "Lamy 'Dust-Free Block Mini-4'",
+    "sku": "KAB-ERA-004",
+    "category_id": "240d9425-f2e3-479a-bfe9-700bea7abf8d",
+    "price": 166.95,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647837794-0.4612108706903738.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647837795-0.8915954875919695.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647837795-0.9949172211262466.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647837795-0.9026289183531178.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647837795-0.14052918281544668.png"
+    ],
+    "description": "Professional Lamy Dust-Free Mini-4, high quality correction.",
+    "specs": {
+      "type": "Eraser",
+      "brand": "Lamy Professional"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good"
+    ],
+    "cost": 100.17
+  },
+  {
+    "id": "f3c7a816-eebf-4c88-8293-0c10dbce6e0d",
+    "name": "Pentel 'Dust-Free Block Mini-2'",
+    "sku": "KAB-ERA-002",
+    "category_id": "240d9425-f2e3-479a-bfe9-700bea7abf8d",
+    "price": 81.55,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647860737-0.4589447786224753.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647860738-0.8905899014677149.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647860738-0.07092244377451196.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647860738-0.8983594364542975.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774647860738-0.2762114187412883.png"
+    ],
+    "description": "Pentel Dust-Free Mini-2, small and efficient for student pencil cases.",
+    "specs": {
+      "type": "Eraser",
+      "series": "Mini-2"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good"
+    ],
+    "cost": 48.93
+  },
+  {
+    "id": "60a321f0-c2ea-4b62-9dc2-6932e85e98cc",
+    "name": "Zebra 'Precision Ruler 50cm'",
+    "sku": "KAB-VAR-005",
+    "category_id": "68c7ea8a-5dcd-4e19-8009-c92b7f99d706",
+    "price": 369.25,
+    "stock": 97,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711457462-0.7832009996709745.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711457462-0.5656622425046339.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711457462-0.5641073846011149.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711457462-0.3958417597524069.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711457462-0.10994987549617052.png"
+    ],
+    "description": "Zebra 50cm Precision Ruler with easy-to-read metric scales.",
+    "specs": {
+      "length": "50cm",
+      "material": "Hardened Plastic"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical"
+    ],
+    "cost": 221.55
+  },
+  {
+    "id": "f967bbda-c5c1-43b2-b21a-b95915a4b73e",
+    "name": "Moleskine 'World History Outline Pt.5'",
+    "sku": "KAB-SOC-005",
+    "category_id": "ccc8718c-84b6-4370-af0a-83c0e040fd3d",
+    "price": 492.1,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715734078-0.6649491599841758.png"
+    ],
+    "description": "Premium Moleskine World History Outline Pt.5 collector book.",
+    "specs": {
+      "format": "Premium Edition",
+      "subject": "Colonial History"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education",
+      "New"
+    ],
+    "cost": 295.26
+  },
+  {
+    "id": "6a5da4c9-9c95-4997-a371-fb8e7c1ebc6c",
+    "name": "Pilot 'Physics Lab Manual V4'",
+    "sku": "KAB-SCI-004",
+    "category_id": "30e981a5-892f-4347-b012-30853368be54",
+    "price": 615.65,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774715261606-0.9778310905705012.png"
+    ],
+    "description": "Pilot Physics Lab Manual V4, specifically covering thermodynamic laws.",
+    "specs": {
+      "topics": "Thermodynamics",
+      "subject": "Physics"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Education",
+      "New"
+    ],
+    "cost": 369.39
+  },
+  {
+    "id": "1dff15ed-0fb2-4a6f-b0d5-fed3cb610ff2",
+    "name": "Zebra 'Gel Ink Fineliner 0.5mm'",
+    "sku": "KAB-PEN-007",
+    "category_id": "56e887c1-9f93-41c0-ba2a-f158c7a7694e",
+    "price": 236.25,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658404770-0.2540392960878488.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658404771-0.7864786346346052.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658404771-0.8033512414589882.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658404771-0.9974775784516818.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658404771-0.8172158447327733.png"
+    ],
+    "description": "Precise Zebra Gel Ink Fineliner with a fine 0.5mm tip for detailed writing.",
+    "specs": {
+      "ink": "Quick-dry Gel",
+      "tip": "0.5mm",
+      "refillable": false
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money"
+    ],
+    "cost": 141.75
+  },
+  {
+    "id": "9569c7f3-b21c-4444-bbe6-5abc5c8f1c74",
+    "name": "Muji 'Gel Ink Fineliner 0.4mm'",
+    "sku": "KAB-PEN-001",
+    "category_id": "56e887c1-9f93-41c0-ba2a-f158c7a7694e",
+    "price": 302.75,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658462008-0.37806427915120255.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658462008-0.6315516174115752.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658462009-0.5803915507565396.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658462009-0.39817612782672096.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658462009-0.333250822449526.png"
+    ],
+    "description": "Iconic Muji 0.4mm Gel Fineliner, loved for its clean design and flow.",
+    "specs": {
+      "ink": "Water-based",
+      "tip": "0.4mm",
+      "body": "Translucent"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Minimal"
+    ],
+    "cost": 181.65
+  },
+  {
+    "id": "faadde27-b686-486d-84e7-91d1d75a2f03",
+    "name": "Faber-Castell 'Gel Ink Fineliner 0.6mm'",
+    "sku": "KAB-PEN-008",
+    "category_id": "56e887c1-9f93-41c0-ba2a-f158c7a7694e",
+    "price": 244.3,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658561389-0.9288919740931436.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658561389-0.34237195154485767.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658561389-0.0087249834936578.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658561389-0.2199842267954143.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658561389-0.7404225503398835.png"
+    ],
+    "description": "Consistently smooth Faber-Castell 0.6mm Gel Fineliner.",
+    "specs": {
+      "ink": "Black",
+      "tip": "0.6mm"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money"
+    ],
+    "cost": 146.58
+  },
+  {
+    "id": "6bcc9db4-a43b-4ecc-86fd-902f772263fd",
+    "name": "Pentel 'Precision Ruler 20cm'",
+    "sku": "KAB-VAR-002",
+    "category_id": "68c7ea8a-5dcd-4e19-8009-c92b7f99d706",
+    "price": 341.95,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711413133-0.14580894000336442.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711413133-0.7671229588786105.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711413133-0.8307429901885306.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711413133-0.2955763551245686.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711413133-0.9688714151695964.png"
+    ],
+    "description": "Compact Pentel 20cm Precision Ruler, fits perfectly in most pencil cases.",
+    "specs": {
+      "length": "20cm",
+      "material": "Clear Acrylic"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical"
+    ],
+    "cost": 205.17
+  },
+  {
+    "id": "608db826-78d2-4bfd-a335-194550755c85",
+    "name": "Rotring 'A5 Grid Journal'",
+    "sku": "KAB-NOT-0010",
+    "category_id": "4de8cc8c-466b-46fb-b99e-66fd6fee3245",
+    "price": 580.3,
+    "stock": 99,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713449753-0.5386857305881941.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713449753-0.6451892745534082.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713449753-0.2352801716634637.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713449753-0.9740585860635969.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713449753-0.2737625281799345.png"
+    ],
+    "description": "Professional Rotring A5 Grid Journal for precise engineering notes.",
+    "specs": {
+      "size": "A5",
+      "paper": "100gsm",
+      "style": "Grid"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "For Journey",
+      "Mechanical"
+    ],
+    "cost": 348.18
+  },
+  {
+    "id": "8ea04ba1-2e68-49cf-83a6-797cb74ea6cc",
+    "name": "Faber-Castell 'A5 Grid Journal'",
+    "sku": "KAB-NOT-004",
+    "category_id": "4de8cc8c-466b-46fb-b99e-66fd6fee3245",
+    "price": 543.2,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713481708-0.9323772837013166.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713481708-0.7171813971827309.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713481708-0.76630199082832.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713481708-0.11885439877113424.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713481708-0.8416673563996058.png"
+    ],
+    "description": "Elegant Faber-Castell A5 Grid Journal for refined note-taking.",
+    "specs": {
+      "size": "A5",
+      "style": "Grid",
+      "cover_material": "Faux Leather"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "For Journey"
+    ],
+    "cost": 325.92
+  },
+  {
+    "id": "bcac4473-097c-43ca-8f89-0c7de12f5436",
+    "name": "Faber-Castell 'A6 Grid Journal'",
+    "sku": "KAB-NOT-008",
+    "category_id": "4de8cc8c-466b-46fb-b99e-66fd6fee3245",
+    "price": 524.3,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713498908-0.9231208994887787.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713498909-0.08402085616104604.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713498909-0.3964101391139665.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713498909-0.5024797694466864.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713498909-0.741881771345204.png"
+    ],
+    "description": "Flexible Faber-Castell A6 Grid Journal, portable and durable.",
+    "specs": {
+      "size": "A6",
+      "style": "Grid",
+      "binding": "Flexi-bound"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "For Journey"
+    ],
+    "cost": 314.58
+  },
+  {
+    "id": "cd8fe38e-6e50-40b5-8b34-9c87e28010f5",
+    "name": "Faber-Castell 'A4 Grid Journal'",
+    "sku": "KAB-NOT-003",
+    "category_id": "4de8cc8c-466b-46fb-b99e-66fd6fee3245",
+    "price": 493.85,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713532914-0.2845166244671007.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713532915-0.3619179639271177.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713532915-0.893422595648633.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713532915-0.08556070637611579.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713532915-0.51837567451799.png"
+    ],
+    "description": "Sturdy Faber-Castell A4 Grid Journal hardcover for long-term records.",
+    "specs": {
+      "size": "A4",
+      "style": "Grid",
+      "binding": "Hardcover"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "For Journey"
+    ],
+    "cost": 296.31
+  },
+  {
+    "id": "e1fa69a0-341d-4be9-b42d-951e8b68accf",
+    "name": "Rotring 'A5 Grid Journal'",
+    "sku": "KAB-NOT-007",
+    "category_id": "4de8cc8c-466b-46fb-b99e-66fd6fee3245",
+    "price": 511,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713546637-0.34905577896497164.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713546637-0.5394166324138895.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713546637-0.17895222792113097.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713546637-0.7212763982554901.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713546637-0.4486496932890377.png"
+    ],
+    "description": "Archival quality Rotring A5 Grid Journal for lasting records.",
+    "specs": {
+      "size": "A5",
+      "layout": "Grid",
+      "edition": "Archival"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "For Journey",
+      "Mechanical"
+    ],
+    "cost": 306.6
+  },
+  {
+    "id": "556005eb-834c-448c-8dd9-f39bcedbafa5",
+    "name": "Faber-Castell 'Bestseller Item 3'",
+    "sku": "KAB-POP-003",
+    "category_id": "b47c0db2-f1f5-4f82-925b-c29bb3a0fabb",
+    "price": 765.45,
+    "stock": 96,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774645409015-0.33572606351434253.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774645409020-0.9806444756184843.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774645409020-0.772162661459711.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774645409020-0.08423444485953224.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774645409020-0.1019272627956983.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774645409020-0.2605474396324179.png"
+    ],
+    "description": "Proven quality with the Faber-Castell Bestseller Item 3.",
+    "specs": {
+      "status": "Hot Seller",
+      "category": "Office"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money"
+    ],
+    "cost": 459.27
+  },
+  {
+    "id": "15489abd-4575-4078-918b-5fa3d77f08c5",
+    "name": "Pilot 'Graphite Pro 3H'",
+    "sku": "KAB-PNC-003",
+    "category_id": "871242c9-2620-4548-af3d-71b1956fe7cb",
+    "price": 124.6,
+    "stock": 99,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641781335-0.12448934660479072.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641781336-0.2272383211580219.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641781336-0.7336432498374669.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641781336-0.28504434660802536.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774641781336-0.14303725613299112.png"
+    ],
+    "description": "Precision Pilot Graphite Pro 3H pencil for light technical drawing lines.",
+    "specs": {
+      "use": "Drafting",
+      "body": "Hexagonal",
+      "lead_hardness": "3H"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Cheap & Good"
+    ],
+    "cost": 74.76
+  },
+  {
+    "id": "3957061b-4d41-493f-981c-334cf1417bf4",
+    "name": "Rotring 'Gel Ink Fineliner 0.5mm'",
+    "sku": "KAB-PEN-002",
+    "category_id": "56e887c1-9f93-41c0-ba2a-f158c7a7694e",
+    "price": 210.7,
+    "stock": 99,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658419724-0.6854909797577966.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658419725-0.271039765263669.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658419725-0.08123439801965049.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658419725-0.23343055772541865.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774658419725-0.8672413569561337.png"
+    ],
+    "description": "Technical Rotring Gel Fineliner, designed for long-lasting archival quality.",
+    "specs": {
+      "ink": "Archival Gel",
+      "tip": "0.5mm",
+      "body_color": "Black"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical"
+    ],
+    "cost": 126.42
+  },
+  {
+    "id": "9ca42eb9-eb0c-42fc-aa70-5446d3e59b6f",
+    "name": "Moleskine 'Precision Ruler 80cm'",
+    "sku": "KAB-VAR-008",
+    "category_id": "68c7ea8a-5dcd-4e19-8009-c92b7f99d706",
+    "price": 384.3,
+    "stock": 99,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711602727-0.012292944160090635.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711602727-0.19520425241217587.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711602727-0.9739208042153584.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711602727-0.4768017913478724.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711602727-0.47635912623380827.png"
+    ],
+    "description": "Luxury Moleskine 80cm Precision Ruler, for large format creations.",
+    "specs": {
+      "length": "80cm",
+      "material": "Brushed Metal"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical",
+      "New"
+    ],
+    "cost": 230.58
+  },
+  {
+    "id": "2b3366d4-1c89-4a12-ab39-c35bec8a3091",
+    "name": "Pentel 'Tape Runner Pro V9'",
+    "sku": "KAB-COR-009",
+    "category_id": "dd78ae84-efb4-4b7f-8e14-9f1f1c4aef27",
+    "price": 255.85,
+    "stock": 96,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657803718-0.7052757683568522.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657803723-0.0005656550619980161.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657803723-0.4658604765634663.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657803723-0.3814314550398583.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774657803723-0.6355567885675472.png"
+    ],
+    "description": "Advanced Pentel Tape Runner Pro V9 for seamless adhesive application.",
+    "specs": {
+      "casing": "Ergonomic",
+      "length": "10m",
+      "tape_width": "8.4mm"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Creative"
+    ],
+    "cost": 153.51
+  },
+  {
+    "id": "c6adb59d-93a7-48e6-a79f-174541fd437e",
+    "name": "Pilot 'A6 Grid Journal'",
+    "sku": "KAB-NOT-002",
+    "category_id": "4de8cc8c-466b-46fb-b99e-66fd6fee3245",
+    "price": 590.1,
+    "stock": 99,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713518437-0.2593828470456575.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713518437-0.6765590125428432.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713518437-0.0654909453440965.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713518437-0.9275740935178948.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774713518437-0.8696918068204242.png"
+    ],
+    "description": "Pilot A6 Grid Journal, high-grade Japanese stationery quality.",
+    "specs": {
+      "size": "A6",
+      "brand": "Pilot Japan",
+      "style": "Grid"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "For Journey"
+    ],
+    "cost": 354.06
+  },
+  {
+    "id": "8394e08c-cdbb-4944-9ff0-aae6a84edbef",
+    "name": "Rotring 'Field Notes A6 Vol.9'",
+    "sku": "KAB-POC-009",
+    "category_id": "9cedad56-4485-4f1a-bfe8-f4746614a55f",
+    "price": 282.45,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714314222-0.5739671804134766.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714314222-0.30629027363313766.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714314222-0.8400752559941423.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714314222-0.9672395507343292.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714314222-0.1151282791592726.png"
+    ],
+    "description": "Eco-friendly Rotring Field Notes A6 Vol.9 for field work and travel.",
+    "specs": {
+      "format": "A6",
+      "volume": "9",
+      "paper_type": "Recycled"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical",
+      "New"
+    ],
+    "cost": 169.47
+  },
+  {
+    "id": "b78d9753-476c-4734-aca4-b8065aa0a219",
+    "name": "Rotring 'Field Notes A6 Vol.4'",
+    "sku": "KAB-POC-004",
+    "category_id": "9cedad56-4485-4f1a-bfe8-f4746614a55f",
+    "price": 442.75,
+    "stock": 99,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714352296-0.8484018668916693.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714352296-0.1624254740542379.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714352296-0.49412428534307373.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714352296-0.7841982302027621.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714352296-0.939001430698279.png"
+    ],
+    "description": "Ruled Rotring Field Notes A6 Vol.4, essential for tidy notes.",
+    "specs": {
+      "vol": "4",
+      "format": "A6",
+      "layout": "Ruled"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical",
+      "New"
+    ],
+    "cost": 265.65
+  },
+  {
+    "id": "cc18b69a-04ac-47b1-9dec-2ab7926afdbd",
+    "name": "Faber-Castell 'Field Notes A6 Vol.8'",
+    "sku": "KAB-POC-008",
+    "category_id": "9cedad56-4485-4f1a-bfe8-f4746614a55f",
+    "price": 357.35,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714391187-0.3034176038356565.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714391187-0.3349692445141462.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714391187-0.7986396269986065.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714391188-0.9681314812821773.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714391188-0.026296274430433697.png"
+    ],
+    "description": "Ruled Faber-Castell Field Notes A6 Vol.8 for clean writing.",
+    "specs": {
+      "vol": "8",
+      "format": "A6",
+      "layout": "Ruled"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money"
+    ],
+    "cost": 214.41
+  },
+  {
+    "id": "e96ab8ec-f5ef-4052-873d-51dc969a2345",
+    "name": "Rotring 'Field Notes A6 Vol.5'",
+    "sku": "KAB-POC-005",
+    "category_id": "9cedad56-4485-4f1a-bfe8-f4746614a55f",
+    "price": 285.6,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714423869-0.9647245200098447.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714423869-0.6164949135724409.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714423869-0.5185913324097083.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714423869-0.8697075209545354.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714423869-0.6966245661067039.png"
+    ],
+    "description": "Ruled Rotring Field Notes A6 Vol.5, for orderly technical data.",
+    "specs": {
+      "vol": "5",
+      "format": "A6",
+      "layout": "Ruled"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical"
+    ],
+    "cost": 171.36
+  },
+  {
+    "id": "9ac7d9ef-870d-40de-b1ec-fd10b78133b8",
+    "name": "Pentel 'Precision Ruler 40cm'",
+    "sku": "KAB-VAR-004",
+    "category_id": "b47c0db2-f1f5-4f82-925b-c29bb3a0fabb",
+    "price": 210,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711582941-0.011449877953412901.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711582942-0.4683592700737299.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711582942-0.006280729364540605.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711582942-0.20131997301762894.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774711582942-0.8935155473577555.png"
+    ],
+    "description": "Standard 40cm Pentel Precision Ruler for education and office work.",
+    "specs": {
+      "length": "40cm",
+      "material": "High-Impact Plastic"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical",
+      "Popular"
+    ],
+    "cost": 126
+  },
+  {
+    "id": "6de992f3-df53-42a6-a399-1d6bf7b1e806",
+    "name": "Rotring 'Field Notes A6 Vol.6'",
+    "sku": "KAB-POC-006",
+    "category_id": "b47c0db2-f1f5-4f82-925b-c29bb3a0fabb",
+    "price": 308.35,
+    "stock": 100,
+    "image_urls": [
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714294628-0.0581642916749362.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714294628-0.7291361210081374.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714294628-0.2591634875204769.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714294628-0.424668433565204.png",
+      "https://bfrpetebgpcyigqzdbjp.supabase.co/storage/v1/object/public/product-images/1774714294628-0.3217227272444184.png"
+    ],
+    "description": "Rotring Field Notes A6 Vol.6, with dotted pages for technical sketching.",
+    "specs": {
+      "format": "A6",
+      "ruling": "Dotted"
+    },
+    "created_at": "2026-03-06T18:08:45.40461+00:00",
+    "tags": [
+      "Value for Money",
+      "Mechanical",
+      "Popular"
+    ],
+    "cost": 185.01
+  }
+]
