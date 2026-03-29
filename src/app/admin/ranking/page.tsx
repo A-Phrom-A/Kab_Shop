@@ -76,8 +76,13 @@ export default function AdminRankingPage() {
 
       (orders || []).forEach(order => {
         const profileId = order.user_id;
-        const profileName = order.profiles?.name || 'Unknown User';
-        const profilePhone = order.profiles?.phone || '-';
+        
+        // Handle Supabase join typing where it might be typed as array
+        const profilesData: any = order.profiles;
+        const profile = Array.isArray(profilesData) ? profilesData[0] : profilesData;
+        
+        const profileName = profile?.name || 'Unknown User';
+        const profilePhone = profile?.phone || '-';
 
         if (!userAggr[profileId]) {
           userAggr[profileId] = {
