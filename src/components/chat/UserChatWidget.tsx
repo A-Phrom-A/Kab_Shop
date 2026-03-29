@@ -10,7 +10,7 @@ export function UserChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [session, setSession] = useState<any>(null);
   
-  // 'menu', 'support' (human), 'ai_recommender', 'ai_support'
+  // 'menu', 'support' (human), 'ai_recommender'
   const [selectedRoomType, setSelectedRoomType] = useState<string>('menu');
   const [roomId, setRoomId] = useState<string | null>(null);
   
@@ -133,7 +133,7 @@ export function UserChatWidget() {
     if (type === 'text') setInputText('');
 
     // If this is an AI room, we fire a request to the API
-    if (selectedRoomType === 'ai_recommender' || selectedRoomType === 'ai_support') {
+    if (selectedRoomType === 'ai_recommender') {
        setIsReceivingAI(true);
        
        // Format conversation for the AI API
@@ -141,6 +141,16 @@ export function UserChatWidget() {
           role: m.sender_role === 'ai' ? 'assistant' : 'user',
           content: m.content
        }));
+
+       const showErrorInChat = async (msg: string) => {
+          await supabase.from('chat_messages').insert({
+            room_id: roomId,
+            sender_id: null,
+            sender_role: 'ai',
+            message_type: 'text',
+            content: msg
+          });
+       };
 
        try {
            const res = await fetch('/api/chat', {
@@ -154,11 +164,18 @@ export function UserChatWidget() {
            });
            
            if (!res.ok) {
-              const errorText = await res.text();
-              throw new Error(`API Error ${res.status}: ${errorText}`);
+              const errorData = await res.json().catch(() => ({}));
+              const errMsg: string = errorData?.error || '';
+              if (errMsg.includes('quota') || errMsg.includes('Quota') || errMsg.includes('limit')) {
+                await showErrorInChat('⚠️ ขออภัยครับ ขณะนี้ระบบ AI ใช้งาน API เกิน Quota ฟรีที่มีอยู่แล้ว กรุณารอสักครู่แล้วลองใหม่อีกครั้งครับ (หรือผู้ดูแลระบบต้องเพิ่ม Billing ใน Google AI Studio)');
+              } else {
+                await showErrorInChat('⚠️ ขออภัยครับ เกิดข้อผิดพลาดจากระบบ AI กรุณาลองใหม่อีกครั้งครับ');
+              }
            }
        } catch (e) {
            console.error("AI fetch error:", e);
+           await showErrorInChat('⚠️ ไม่สามารถเชื่อมต่อกับระบบ AI ได้ขณะนี้ครับ');
+       } finally {
            setIsReceivingAI(false);
        }
     }
@@ -207,8 +224,7 @@ export function UserChatWidget() {
               <div>
                 <h3 className="font-bold text-white text-sm">
                    {selectedRoomType === 'menu' ? 'KabShop Support' :
-                    selectedRoomType === 'support' ? 'Talk to Admin' :
-                    selectedRoomType === 'ai_recommender' ? 'AI Recommender' : 'AI Help Center'}
+                    selectedRoomType === 'support' ? 'Talk to Admin' : 'AI Recommender'}
                 </h3>
                 <p className="text-[10px] text-green-400 font-medium">Online</p>
               </div>
@@ -253,18 +269,6 @@ export function UserChatWidget() {
                   </div>
                 </button>
 
-                <button 
-                  onClick={() => handleMenuSelect('ai_support')}
-                  className="w-full bg-white/5 hover:bg-white/10 border border-white/10 p-4 rounded-xl flex items-center gap-4 text-left transition-all hover:scale-105"
-                >
-                  <div className="bg-green-500/20 text-green-400 p-2 rounded-lg">
-                    <MessageSquare size={20} />
-                  </div>
-                  <div>
-                    <p className="text-white font-semibold text-sm">AI Help Center</p>
-                    <p className="text-white/40 text-xs">FAQs, Order Status, Policies</p>
-                  </div>
-                </button>
              </div>
           )}
 
