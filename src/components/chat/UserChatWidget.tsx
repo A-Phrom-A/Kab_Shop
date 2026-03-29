@@ -1,10 +1,25 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
-import { MessageSquare, Paperclip, Send, X, Image as ImageIcon, Video, Mic, ChevronDown, Smile, Bot, ArrowLeft } from 'lucide-react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { MessageSquare, Send, X, Image as ImageIcon, Video, Mic, ChevronDown, Smile, Bot, ArrowLeft } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { usePathname } from 'next/navigation';
 import { ProductCarousel } from './ProductCarousel';
+
+const STICKERS = [
+  { id: 'Wecandoit', url: '/stickers/Wecandoit.png' },
+  { id: 'receive', url: '/stickers/receive.png' },
+  { id: 'wait', url: '/stickers/wait.png' },
+  { id: 'in_progress', url: '/stickers/in%20progress.png' },
+  { id: 'stun', url: '/stickers/stun.png' },
+  { id: 'cry', url: '/stickers/cry.png' },
+  { id: 'dizzy', url: '/stickers/dizzy.png' },
+  { id: 'Happy', url: '/stickers/Happy.png' },
+  { id: 'hello', url: '/stickers/hello.png' },
+  { id: 'sad', url: '/stickers/sad.png' },
+  { id: 'sorry', url: '/stickers/sorry.png' },
+  { id: 'Thank_you', url: '/stickers/Thank%20you.png' }
+];
 
 export function UserChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +33,7 @@ export function UserChatWidget() {
   const [inputText, setInputText] = useState('');
   const [uploading, setUploading] = useState(false);
   const [isReceivingAI, setIsReceivingAI] = useState(false);
+  const [showStickers, setShowStickers] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
@@ -181,6 +197,54 @@ export function UserChatWidget() {
     }
   };
 
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>, type: 'image' | 'video' | 'audio') => {
+    if (!e.target.files || e.target.files.length === 0 || !roomId || !session?.user) return;
+    const file = e.target.files[0];
+    e.target.value = '';
+
+    if (file.size > 10 * 1024 * 1024) {
+      alert('ไฟล์ใหญ่เกิน 10MB');
+      return;
+    }
+
+    setUploading(true);
+    try {
+      const fileExt = file.name.split('.').pop();
+      const fileName = `${roomId}/${Date.now()}.${fileExt}`;
+
+      const { error: uploadError } = await supabase.storage
+        .from('chat-media')
+        .upload(fileName, file);
+
+      if (uploadError) throw uploadError;
+
+      const { data: { publicUrl } } = supabase.storage
+        .from('chat-media')
+        .getPublicUrl(fileName);
+
+      await sendMessage(type, publicUrl);
+    } catch (err: any) {
+      alert('เกิดข้อผิดพลาดในการอัปโหลดไฟล์: ' + err.message);
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  const renderMessageContent = (msg: any) => {
+    switch (msg.message_type) {
+      case 'image':
+        return <img src={msg.content} alt="รูปภาพ" className="rounded-lg max-w-full cursor-pointer hover:opacity-90" onClick={() => window.open(msg.content, '_blank')} />;
+      case 'video':
+        return <video src={msg.content} controls className="rounded-lg max-w-full" />;
+      case 'audio':
+        return <audio src={msg.content} controls className="max-w-full" />;
+      case 'sticker':
+        return <img src={msg.content} alt="สติกเกอร์" className="w-24 h-24 object-contain" />;
+      default:
+        return <p className="whitespace-pre-wrap break-words text-sm leading-relaxed">{msg.content}</p>;
+    }
+  };
+
   if (pathname.startsWith('/admin')) return null;
 
   if (!session) {
@@ -283,38 +347,46 @@ export function UserChatWidget() {
                   </div>
                 ) : (
                   messages.map(msg => {
-                    const isMine = msg.sender_id === session.user.id || msg.sender_role === 'user';
+                    // ใช้ sender_id (สำหรับ history) และ sender_role เป็นหลัก
+                    const isMine = msg.sender_id === session?.user?.id || msg.sender_role === 'user';
                     
                     // Parse Generative UI tags (e.g., $$PRODUCT_IDS: id1,id2$$)
                     let displayContent = msg.content;
                     let productIds: string[] = [];
                     
-                    const productMatch = displayContent.match(/\$\$PRODUCT_IDS:\s*([a-zA-Z0-9\-_,]+)\$\$/);
-                    if (productMatch) {
-                       productIds = productMatch[1].split(',').filter(Boolean);
-                       displayContent = displayContent.replace(productMatch[0], '').trim();
+                    if (msg.message_type === 'text' || !msg.message_type) {
+                      const productMatch = displayContent?.match(/\$\$PRODUCT_IDS:\s*([a-zA-Z0-9\-_,]+)\$\$/);
+                      if (productMatch) {
+                        productIds = productMatch[1].split(',').filter(Boolean);
+                        displayContent = displayContent.replace(productMatch[0], '').trim();
+                      }
                     }
 
                     return (
-                      <div key={msg.id} className={`flex ${isMine ? 'justify-end' : 'justify-start'} flex-col gap-2`}>
-                        <div className={`flex ${isMine ? 'justify-end' : 'justify-start'}`}>
-                          <div className={`max-w-[85%] rounded-2xl p-3 ${
-                            isMine ? 'bg-gold text-black rounded-tr-sm' : 'bg-black/60 border border-white/10 rounded-tl-sm'
-                          }`}>
-                            <p className={`whitespace-pre-wrap break-words text-sm leading-relaxed ${!isMine && 'text-white/90'}`}>
-                               {displayContent}
-                            </p>
-                            <p className={`text-[10px] text-right mt-1 ${isMine ? 'text-black/60' : 'text-white/40'}`}>
-                              {new Date(msg.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                            </p>
-                          </div>
+                      <div key={msg.id} className={`flex flex-col gap-1 ${isMine ? 'items-end' : 'items-start'}`}>
+                        <div className={`max-w-[85%] rounded-2xl px-3 py-2 ${
+                          isMine
+                            ? 'bg-gold text-black rounded-tr-sm'
+                            : 'bg-white/10 border border-white/10 text-white rounded-tl-sm'
+                        }`}>
+                          {!isMine && msg.sender_role === 'admin' && (
+                            <p className="text-[10px] font-bold text-gold/80 mb-1">Admin</p>
+                          )}
+                          {(msg.message_type === 'text' || !msg.message_type) ? (
+                            <p className="whitespace-pre-wrap break-words text-sm leading-relaxed">{displayContent}</p>
+                          ) : (
+                            renderMessageContent(msg)
+                          )}
+                          <p className={`text-[10px] text-right mt-1 ${isMine ? 'text-black/60' : 'text-white/40'}`}>
+                            {new Date(msg.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                          </p>
                         </div>
                         
-                        {/* Render Generative UI below the chat bubble if product IDs exist */}
+                        {/* Generative UI for product recommendations */}
                         {productIds.length > 0 && !isMine && (
-                           <div className="pl-2 w-full max-w-[320px]">
-                              <ProductCarousel ids={productIds} />
-                           </div>
+                          <div className="w-full max-w-[320px]">
+                            <ProductCarousel ids={productIds} />
+                          </div>
                         )}
                       </div>
                     );
@@ -334,6 +406,53 @@ export function UserChatWidget() {
 
               {/* Input */}
               <div className="relative p-3 bg-black/40 border-t border-white/10">
+                
+                {/* Stickers Drawer */}
+                {selectedRoomType === 'support' && showStickers && (
+                  <div className="absolute bottom-full left-0 mb-2 w-[320px] bg-neutral-900 border border-white/20 rounded-xl p-3 shadow-2xl z-50 animate-in fade-in slide-in-from-bottom-2">
+                    <div className="flex justify-between items-center mb-2 px-1">
+                      <span className="text-xs font-bold text-white/50 uppercase tracking-wider">Stickers</span>
+                      <button onClick={() => setShowStickers(false)} className="text-white/40 hover:text-white"><X size={14}/></button>
+                    </div>
+                    <div className="grid grid-cols-4 gap-2 max-h-[200px] overflow-y-auto p-1 custom-scrollbar">
+                      {STICKERS.map(s => (
+                        <button 
+                          key={s.id} 
+                          onClick={() => {
+                            sendMessage('sticker', s.url);
+                            setShowStickers(false);
+                          }}
+                          className="hover:scale-110 hover:bg-white/5 transition-all p-2 rounded-lg flex items-center justify-center pointer-events-auto"
+                        >
+                          <img src={s.url} alt={s.id} className="w-16 h-16 object-contain" />
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Media buttons row (only for support room) */}
+                {selectedRoomType === 'support' && (
+                  <div className="flex gap-1 mb-2">
+                    <label className="p-1.5 text-white/50 hover:text-gold hover:bg-white/5 rounded-full cursor-pointer transition-colors" title="อัปโหลดรูปภาพ">
+                      <ImageIcon size={18} />
+                      <input type="file" accept="image/*" className="hidden" onChange={(e) => handleFileUpload(e, 'image')} disabled={uploading || isReceivingAI} />
+                    </label>
+                    <label className="p-1.5 text-white/50 hover:text-gold hover:bg-white/5 rounded-full cursor-pointer transition-colors" title="อัปโหลดวิดีโอ">
+                      <Video size={18} />
+                      <input type="file" accept="video/mp4,video/quicktime,video/webm" className="hidden" onChange={(e) => handleFileUpload(e, 'video')} disabled={uploading || isReceivingAI} />
+                    </label>
+                    <label className="p-1.5 text-white/50 hover:text-gold hover:bg-white/5 rounded-full cursor-pointer transition-colors" title="อัปโหลดเสียง">
+                      <Mic size={18} />
+                      <input type="file" accept="audio/*" className="hidden" onChange={(e) => handleFileUpload(e, 'audio')} disabled={uploading || isReceivingAI} />
+                    </label>
+                    <button onClick={() => setShowStickers(!showStickers)} className={`p-1.5 rounded-full transition-colors ${showStickers ? 'text-gold bg-white/10' : 'text-white/50 hover:text-gold hover:bg-white/5'}`} title="ส่งสติกเกอร์">
+                      <Smile size={18} />
+                    </button>
+                    {uploading && <span className="text-xs text-gold/70 self-center ml-1 animate-pulse">กำลังอัปโหลด...</span>}
+                  </div>
+                )}
+
                 <div className="flex bg-black/40 border border-white/10 rounded-xl overflow-hidden focus-within:border-gold transition-colors">
                   <input 
                     type="text"
@@ -343,7 +462,7 @@ export function UserChatWidget() {
                       if (e.key === 'Enter') sendMessage('text', inputText);
                     }}
                     disabled={uploading || isReceivingAI}
-                    placeholder="Type a message..."
+                    placeholder="พิมพ์ข้อความ..."
                     className="flex-1 bg-transparent px-3 py-3 text-sm outline-none w-full text-white placeholder-white/40"
                   />
                   <button 

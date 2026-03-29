@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { MessageSquare, Paperclip, Send, X, Image as ImageIcon, Video, Mic, Smile } from 'lucide-react';
+import { MessageSquare, Paperclip, Send, X, Image as ImageIcon, Video, Mic, Smile, Bot, Headset } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { Card } from '@/components/ui/Card';
 
@@ -139,6 +139,7 @@ export default function AdminChatPage() {
     await supabase.from('chat_messages').insert({
       room_id: activeRoomId,
       sender_id: currentUser.id,
+      sender_role: 'admin',
       message_type: type,
       content: content
     });
@@ -225,8 +226,9 @@ export default function AdminChatPage() {
                   </div>
                   <div className="flex-1 overflow-hidden">
                     <p className="font-bold text-sm text-white truncate">{other?.name || 'Unknown User'}</p>
-                    <p className="text-xs text-white/50 truncate">
-                      {room.type === 'support' ? 'Customer Support' : 'Direct Message'}
+                    <p className="text-xs text-white/50 truncate flex items-center gap-1 mt-0.5">
+                      {room.type === 'support' ? <><Headset size={12}/> Customer Support</> : 
+                       room.type === 'ai_recommender' ? <><Bot size={12}/> AI Recommender</> : 'Direct Message'}
                     </p>
                   </div>
                 </div>
@@ -251,7 +253,10 @@ export default function AdminChatPage() {
                   <h3 className="font-bold text-gold">
                     {getOtherParticipant(rooms.find(r => r.id === activeRoomId)!)?.name || 'Unknown User'}
                   </h3>
-                  <p className="text-xs text-white/50">Support Request</p>
+                  <p className="text-xs text-white/50 flex items-center gap-1 mt-0.5">
+                    {rooms.find(r => r.id === activeRoomId)?.type === 'support' ? <><Headset size={12}/> Customer Support</> :
+                     rooms.find(r => r.id === activeRoomId)?.type === 'ai_recommender' ? <><Bot size={12}/> AI Recommender</> : 'Direct Message'}
+                  </p>
                 </div>
             </div>
 

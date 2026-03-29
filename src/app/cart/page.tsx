@@ -221,14 +221,17 @@ export default function CartPage() {
 
             <div className="bg-white/5 rounded-xl p-4 border border-white/10 mt-2">
               <h4 className="text-sm font-bold text-white mb-2">Payment Details</h4>
-              <p className="text-xs text-white/70 mb-1">Bank: <span className="text-white">SCB (Siam Commercial Bank)</span></p>
-              <p className="text-xs text-white/70 mb-1">Account No: <span className="text-white font-mono break-all">123-4-56789-0</span></p>
+              <p className="text-xs text-white/70 mb-1">Bank: <span className="text-white">K plus (กสิกร)</span></p>
+              <p className="text-xs text-white/70 mb-1">Account No: <span className="text-white font-mono break-all">062-3-26849-7</span></p>
               <p className="text-xs text-white/70 mb-4">Account Name: <span className="text-white">kabshop Co., Ltd.</span></p>
 
               {/* PromptPay QR Code */}
               <div className="w-full bg-white rounded-xl flex flex-col items-center justify-center p-4 mx-auto max-w-[200px] mb-4 shadow-lg border-2 border-[#113566]">
-                <div className="bg-[#113566] w-full py-2 text-center rounded-t-lg mb-4 flex items-center justify-center gap-2">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/PromptPay-logo.svg/1024px-PromptPay-logo.svg.png" alt="PromptPay" className="h-4 object-contain brightness-0 invert" />
+                <div className="bg-[#113566] w-full py-2 text-center rounded-t-lg mb-4 flex items-center justify-center">
+                  <div className="flex items-center font-sans tracking-tight">
+                    <span className="text-white font-bold text-lg select-none">Prompt</span>
+                    <span className="text-blue-200 font-bold text-lg ml-0.5 select-none">Pay</span>
+                  </div>
                 </div>
                 <div className="p-2 bg-white rounded-lg">
                   <QRCodeSVG
