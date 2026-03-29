@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { LayoutDashboard, Package, ShoppingBag, FolderTree, Settings, ShieldAlert, MessageSquare } from 'lucide-react';
+import { LayoutDashboard, Package, ShoppingBag, FolderTree, Settings, ShieldAlert, MessageSquare, BarChart3 } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -59,6 +59,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
   const navLinks = [
     { href: '/admin', label: 'Dashboard Overview', icon: LayoutDashboard },
+    { href: '/admin/ranking', label: 'Ranking', icon: BarChart3 },
     { href: '/admin/orders', label: 'Order Management', icon: ShoppingBag },
     { href: '/admin/products', label: 'Products', icon: Package },
     { href: '/admin/categories', label: 'Categories', icon: FolderTree },
